@@ -383,7 +383,7 @@ public class Exercises {
 		int willyCrayons = 1400;
 		int lucyCrayons = 290;
 
-		int willyVsLucy = willyCrayons%lucyCrayons;
+		int willyVsLucy = willyCrayons-lucyCrayons;
 
 
         /* Exercise 38
@@ -402,10 +402,10 @@ public class Exercises {
         person get if they share the cupcakes equally?
         */
 
-		int totalCupcakes = 100;
-		int totalChildren = 8;
+		double totalCupcakes = 100;
+		double totalChildren = 8;
 
-		int cupcakesShare = totalCupcakes/totalChildren;
+		double cupcakesShare = totalCupcakes/totalChildren;
 
 
 
@@ -428,12 +428,23 @@ public class Exercises {
         how many will be left with Marian?
         */
 
+		int totalCroissants = 59;
+		int neighbors = 8;
+
+		int totalNeighbors = totalCroissants%neighbors;
+
+
 
         /* Exercise 42
         42. Marian also baked oatmeal cookies for her classmates. If she can
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
+
+		int cookiesPerTray = 12;
+		int oCookies = 276;
+
+		int totalOCookies = oCookies/cookiesPerTray;
 
 
         /* Exercise 43
@@ -442,6 +453,10 @@ public class Exercises {
         servings of bite-sized pretzels was Marian able to prepare?
         */
 
+		int totalPretzels = 480;
+		int oneServing = 12;
+
+		int prepare = totalPretzels/oneServing;
 
         /* Exercise 44
         44. Lastly, she baked 53 lemon cupcakes for the children living in the city
@@ -449,12 +464,22 @@ public class Exercises {
         boxes with 3 lemon cupcakes each were given away?
         */
 
+		int lCupcakes = 51;
+		int lcBoxes = 3;
+
+		int cupcakesPerBox = lCupcakes/lcBoxes;
+
+
 
         /* Exercise 45
         45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
+		int carrotS = 74;
+		int carrotPeople = 12;
+
+		int carrotsLeft = 74/12;
 
 
         /* Exercise 46
@@ -463,12 +488,22 @@ public class Exercises {
         maximum of 7 teddy bears, how many shelves will be filled?
         */
 
+		int teddyB = 98;
+		int bearPerShelf = 7;
+
+		int totalBears = teddyB/bearPerShelf;
+
 
         /* Exercise 47
         47. Susie’s mother collected all family pictures and wanted to place all of
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
+
+		int picturesPerAlbum = 20;
+		int totalPics = 480;
+
+		int remainingPics = totalPics/picturesPerAlbum;
 
 
         /* Exercise 48
@@ -478,12 +513,19 @@ public class Exercises {
         the unfilled box?
         */
 
+		int totalCards = 94;
+		int fullBox = 8;
+
+		int fullBox%totalCards;
+
 
         /* Exercise 49
         49. Susie’s father repaired the bookshelves in the reading room. If he has
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
+
+		
 
 
         /* Exercise 50
