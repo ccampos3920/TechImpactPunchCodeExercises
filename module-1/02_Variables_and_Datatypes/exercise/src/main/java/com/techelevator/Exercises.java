@@ -26,35 +26,57 @@ public class Exercises {
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
         */
+		int raccoons = 3;
+		int dinnerRacoons = 2;
+		int raccoonsLeft = raccoons-dinnerRacoons;
 
 
         /* Exercise 4
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
+		int flowers = 5;
+		int bees = 3;
+		int answer =  flowers%bees;
 
 
         /* Exercise 5
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
+		int pigeon = 1;
+		int anotherPigeon = 1;
+
+		int exaFive = pigeon+anotherPigeon;
 
 
         /* Exercise 6
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
+		int owls = 3;
+		int newOwls = 2;
+
+		int exaSix = owls+newOwls;
 
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
+		int beavers = 2;
+		int swimmingBeavers = 1;
 
+		int exaSeven = beavers-swimmingBeavers;
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
+
+		int toucans = 2;
+		int newToucans = 1;
+
+		int exaEight = toucans+newToucans;
 
 
         /* Exercise 9
@@ -62,11 +84,20 @@ public class Exercises {
         are there than nuts?
         */
 
+		int squirrels = 4;
+		int nuts = 2;
+
+		int exaNine = (nuts%squirrels);
+
+
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
+
+		double dime = .10;
+		double 
 
 
         /* Exercise 11
