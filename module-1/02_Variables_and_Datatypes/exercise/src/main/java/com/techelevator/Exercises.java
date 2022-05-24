@@ -479,7 +479,7 @@ public class Exercises {
 		int carrotS = 74;
 		int carrotPeople = 12;
 
-		int carrotsLeft = carrotS/carrotPeople;
+		int carrotsLeft = carrotS%carrotPeople;
 
 
         /* Exercise 46
@@ -538,10 +538,11 @@ public class Exercises {
         her seven guests, how many will each have?
         */
 
-		int cristinaC = 17;
-		int guests = 7;
+		double cristinaC = 17;
+		double guests = 7;
 
-		int cristinaAnswers = guests%cristinaC;
+		double cristinaAnswers = cristinaC/guests;
+
 
 		/* Exercise 51
 	    51. Bill and Jill are house painters. Bill can paint a 12 x 14 room in 2.15 hours, while Jill averages
@@ -576,10 +577,10 @@ public class Exercises {
 	    What percentage of the trip as a whole number has been completed?
 	    */
 
-		int distanceMiles = 800;
-		int totalMilesT = 537;
+		double distanceMiles = 800;
+		double totalMilesT = 537;
 
-		int distanceA = distanceMiles/totalMilesT*;
+		double distanceA = distanceMiles/totalMilesT*100;
 
 
 
