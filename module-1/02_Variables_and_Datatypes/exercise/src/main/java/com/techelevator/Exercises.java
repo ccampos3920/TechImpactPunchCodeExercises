@@ -156,11 +156,11 @@ public class Exercises {
         case. How much money does she have left?
         */
 
-		int hiltMoney = 10;
-		int toyTruck = 3;
-		int pencilCase = 2;
+		double hiltMoney = 10.00;
+		double toyTruck = 3.00;
+		double pencilCase = 2.00;
 
-		int exaFT = hiltMoney-toyTruck-pencilCase;
+		double exaFF = hiltMoney-toyTruck-pencilCase;
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
@@ -190,7 +190,7 @@ public class Exercises {
 		int bradTotalBalloons = 17;
 		int redBalloons = 8;
 
-		int greenBalloons = redBalloons%bradTotalBalloons;
+		int greenBalloons = bradTotalBalloons-redBalloons;
 
 
         /* Exercise 19
@@ -252,7 +252,7 @@ public class Exercises {
 		int concertMiles = 78;
 		int milesDriven = 32;
 
-		int milesLeft = concertMiles%milesDriven;
+		int milesLeft = concertMiles-milesDriven;
 
 
         /* Exercise 25
@@ -280,10 +280,10 @@ public class Exercises {
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
-		double hiltsMoney = .50;
-		double pencilCost = .7;
+		int hiltsMoney = 50;
+		int pencilCost = 7;
 
-		double purchasablePencils = hiltsMoney%pencilCost;
+		int purchasablePencils = hiltsMoney / pencilCost;
 
         /* Exercise 28
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
@@ -372,7 +372,7 @@ public class Exercises {
 		int bakedMuffins = 35;
 		int muffinsLeft = 83;
 
-		int muffinsRemaining = bakedMuffins%muffinsLeft;
+		int muffinsRemaining = muffinsLeft-bakedMuffins;
 
 
         /* Exercise 37
@@ -479,7 +479,7 @@ public class Exercises {
 		int carrotS = 74;
 		int carrotPeople = 12;
 
-		int carrotsLeft = 74/12;
+		int carrotsLeft = carrotS/carrotPeople;
 
 
         /* Exercise 46
@@ -516,7 +516,7 @@ public class Exercises {
 		int totalCards = 94;
 		int fullBox = 8;
 
-		int fullBox%totalCards;
+		int boxTotal = totalCards%fullBox;
 
 
         /* Exercise 49
@@ -525,7 +525,12 @@ public class Exercises {
         how many books will each shelf contain?
         */
 
-		
+		int susieBooks = 210;
+		int equalShelves = 10;
+
+		int booksContained = susieBooks/equalShelves;
+
+
 
 
         /* Exercise 50
@@ -533,12 +538,22 @@ public class Exercises {
         her seven guests, how many will each have?
         */
 
+		int cristinaC = 17;
+		int guests = 7;
 
-	    /* Exercise 51
+		int cristinaAnswers = guests%cristinaC;
+
+		/* Exercise 51
 	    51. Bill and Jill are house painters. Bill can paint a 12 x 14 room in 2.15 hours, while Jill averages
 	    1.90 hours. How long will it take the two painters working together to paint 5 12 x 14 rooms?
 	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
 	    */
+
+
+
+
+
+
 
 
 	    /* Exercise 52
@@ -549,11 +564,29 @@ public class Exercises {
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
 
+		String firstName = "Grace";
+		String lastName = "Hopper";
+		String middleI = "B";
+
+		String fullName = lastName+", "+firstName+ " " + middleI+".";
+
 
 	    /* Exercise 53
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
+
+		int distanceMiles = 800;
+		int totalMilesT = 537;
+
+		int distanceA = distanceMiles/totalMilesT*;
+
+
+
+
+
+
+
 
 	}
 
