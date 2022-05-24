@@ -550,6 +550,18 @@ public class Exercises {
 	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
 	    */
 
+		/* B 129 mins
+		   J = 114 m
+
+		 */
+
+		double billM = 129/60*114;
+		double jillM = 114/60*114;
+		double totalWalls = 168*5;
+
+		double combinedRate = billM+jillM/totalWalls;
+
+
 
 
 
@@ -577,10 +589,10 @@ public class Exercises {
 	    What percentage of the trip as a whole number has been completed?
 	    */
 
-		double distanceMiles = 800;
-		double totalMilesT = 537;
+		float totalMiles = 800f;
+		float milesTraveled = 537f;
+		int totalPercent = (int) ((milesTraveled / totalMiles)*100);
 
-		double distanceA = distanceMiles/totalMilesT*100;
 
 
 
