@@ -555,11 +555,14 @@ public class Exercises {
 
 		 */
 
-		double billM = 129/60*114;
-		double jillM = 114/60*114;
-		double totalWalls = 168*5;
+		double billM = 1/2.15;
+		double jillM = 1/1.90;
 
-		double combinedRate = billM+jillM/totalWalls;
+		double combinedRate = billM+jillM;
+		double walls = 5;
+
+		double totalPaint = walls/combinedRate;
+
 
 
 
