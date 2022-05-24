@@ -95,9 +95,11 @@ public class Exercises {
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
-
+		double quarter = .25;
 		double dime = .10;
-		double 
+		double nickels = .10;
+
+		double exaTen = dime+nickels+quarter;
 
 
         /* Exercise 11
@@ -107,18 +109,34 @@ public class Exercises {
         grade bake in all?
         */
 
+		int hiltclassMuffins = 18;
+		int macadamsClassMuffins = 20;
+		int flanneryClassMuffins = 17;
+
+		int exaEleven = hiltclassMuffins+macadamsClassMuffins+flanneryClassMuffins;
+
+
 
         /* Exercise 12
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
 
+		double yoyo = .24;
+		double whistle = .14;
+
+		double exaTwelve = yoyo+whistle;
 
         /* Exercise 13
         13. Mrs. Hilt made 5 Rice Krispies Treats. She used 8 large marshmallows
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
+
+		int largeMarshmellows = 8;
+		int miniMarshbellows = 10;
+
+		int exaThirteen = largeMarshmellows+miniMarshbellows;
 
 
         /* Exercise 14
@@ -127,29 +145,52 @@ public class Exercises {
         did Mrs. Hilt's house have?
         */
 
+		int hiltSnow = 29;
+		int esSnow = 17;
+
+		int exaFourteen = hiltSnow%esSnow;
+
 
         /* Exercise 15
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
 
+		int hiltMoney = 10;
+		int toyTruck = 3;
+		int pencilCase = 2;
+
+		int exaFT = toyTruck+pencilCase-hiltMoney;
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
 
+		int joshMarbles = 16;
+		int lostMarbles = 7;
+
+		int exaSixteen= joshMarbles-lostMarbles;
 
         /* Exercise 17
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
 
+		int megan = 19;
+		int meganDesShells = 25;
+
+		int exaSeventeen = meganDesShells%megan;
 
         /* Exercise 18
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
+
+		int bradTotalBalloons = 17;
+		int redBalloons = 8;
+
+		int greenBalloons = redBalloons%bradTotalBalloons;
 
 
         /* Exercise 19
@@ -157,10 +198,20 @@ public class Exercises {
         How many books are on the shelf now?
         */
 
+		int books = 38;
+		int addedBooks = 10;
+
+		int totalBooks = books+addedBooks;
+
 
         /* Exercise 20
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
+
+		int beeLegs = 6;
+		int totalBees = 8;
+
+		int totalLegs = beeLegs*totalBees;
 
 
         /* Exercise 21
