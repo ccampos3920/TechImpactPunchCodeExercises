@@ -369,11 +369,21 @@ public class Exercises {
         bake to have 83 muffins?
         */
 
+		int bakedMuffins = 35;
+		int muffinsLeft = 83;
+
+		int muffinsRemaining = bakedMuffins%muffinsLeft;
+
 
         /* Exercise 37
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
+
+		int willyCrayons = 1400;
+		int lucyCrayons = 290;
+
+		int willyVsLucy = willyCrayons%lucyCrayons;
 
 
         /* Exercise 38
@@ -381,11 +391,23 @@ public class Exercises {
         many stickers do you have?
         */
 
+		int stickersPage = 10;
+		int totalPages = 22;
+
+		int totalStickers = stickersPage*totalPages;
+
 
         /* Exercise 39
         39. There are 100 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
+
+		int totalCupcakes = 100;
+		int totalChildren = 8;
+
+		int cupcakesShare = totalCupcakes/totalChildren;
+
+
 
 
         /* Exercise 40
@@ -393,6 +415,11 @@ public class Exercises {
         tiny glass jars. If each jar is to contain six cookies, how many
         cookies will not be placed in a jar?
         */
+
+		int totalCookies = 47;
+		int cookiesPerJar = 6;
+
+		int cookiesTotalJar = totalCookies%cookiesPerJar;
 
 
         /* Exercise 41
