@@ -122,10 +122,10 @@ public class Exercises {
         much did she spend in all for the two toys?
         */
 
-		double yoyo = .24;
-		double whistle = .14;
+		double yoyoCost = .24;
+		double whistleCost = .14;
 
-		double exaTwelve = yoyo+whistle;
+		double exaTwelve = yoyoCost+whistleCost;
 
         /* Exercise 13
         13. Mrs. Hilt made 5 Rice Krispies Treats. She used 8 large marshmallows
@@ -133,10 +133,10 @@ public class Exercises {
         altogether?
         */
 
-		int largeMarshmellows = 8;
-		int miniMarshbellows = 10;
+		int largeMarshmallows = 8;
+		int miniMarshmallows = 10;
 
-		int exaThirteen = largeMarshmellows+miniMarshbellows;
+		int exaThirteen = largeMarshmallows+miniMarshmallows;
 
 
         /* Exercise 14
@@ -160,7 +160,7 @@ public class Exercises {
 		int toyTruck = 3;
 		int pencilCase = 2;
 
-		int exaFT = toyTruck+pencilCase-hiltMoney;
+		int exaFT = hiltMoney-toyTruck-pencilCase;
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
@@ -218,13 +218,19 @@ public class Exercises {
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
+		double iceCreamCone = .99;
 
+		double coneCost = iceCreamCone*2;
 
         /* Exercise 22
         22. Mrs. Hilt wants to make a border around her garden. She needs 125
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
+		int totalRocks = 125;
+		int currentRocks = 64;
+
+		int rocksNeeded = totalRocks%currentRocks;
 
 
         /* Exercise 23
@@ -232,11 +238,21 @@ public class Exercises {
         she have left?
         */
 
+		int totalMarbles = 38;
+		int marblesLost = 15;
+
+		int remainingMarbles = totalMarbles-marblesLost;
+
 
         /* Exercise 24
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
+
+		int concertMiles = 78;
+		int milesDriven = 32;
+
+		int milesLeft = concertMiles%milesDriven;
 
 
         /* Exercise 25
@@ -244,19 +260,30 @@ public class Exercises {
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
+		int shovelingSnowHours = 90;
+		int afternoonShoveling = 45;
 
+		int totalTimeShoveling = shovelingSnowHours+afternoonShoveling;
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
 
+		double boughtHotdogs = 6;
+		double costOfHotdogs = .50;
+
+		double totalHotDogCost = boughtHotdogs*costOfHotdogs;
+
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+		double hiltsMoney = .50;
+		double pencilCost = .7;
 
+		double purchasablePencils = hiltsMoney%pencilCost;
 
         /* Exercise 28
         28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
@@ -264,17 +291,29 @@ public class Exercises {
         were red?
         */
 
+		int butterfliesSeen = 33;
+		int orangeButterflies = 20;
+
+		int redButterflies = butterfliesSeen%orangeButterflies;
+
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
 
+		double katesMoney = 1.00;
+		double candyCost = 0.54;
 
+		double changeBack = katesMoney-candyCost;
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
+		int totalTrees = 13;
+		int newTrees = 12;
+
+		int amountOfTrees = totalTrees+newTrees;
 
 
         /* Exercise 31
@@ -282,30 +321,48 @@ public class Exercises {
         her?
         */
 
+		int hoursInADay = 24;
+		int totalHours = hoursInADay*2;
+
 
         /* Exercise 32
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
+		int kimsCousins = 4;
+		int gumPieces = 5;
 
+		int totalGum = 4*5;
 
         /* Exercise 33
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
 
+		double dansMoney = 3.00;
+		double candyBarCost = 1.00;
+
+		double dansMoneyLeft = dansMoney-candyBarCost;
 
         /* Exercise 34
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
 
+		int lakeBoats = 5;
+		int peoplePerBoat = 3;
+
+		int totalPeople = lakeBoats*peoplePerBoat;
+
 
         /* Exercise 35
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
+		int totalLegos = 380;
+		int lostLegos = 57;
 
+		int legosLeft = totalLegos-lostLegos;
 
         /* Exercise 36
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
