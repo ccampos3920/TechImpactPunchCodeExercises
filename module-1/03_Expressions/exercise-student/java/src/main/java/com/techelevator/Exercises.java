@@ -95,7 +95,12 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
-		return false;
+		if((a+b==10) || (a == 10 || b==10)){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/*
@@ -105,8 +110,13 @@ public class Exercises {
 	 posNeg(-1, 1, false) → true
 	 posNeg(-4, -5, true) → true
 	 */
-	public boolean posNeg(int a, int b, boolean negative) {
-		return false;
+	public boolean posNeg(int a, int b, boolean negative){
+		if(a>=1 && b<=-1 && !negative || a<=-1&&b>=1 &&!negative || a<=-1 && b<=-1 && negative==true){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/*
