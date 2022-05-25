@@ -10,7 +10,13 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		return false;
+		if (weekday == true && vacation == false){
+			return false;
+		}
+		else {
+			return true;
+		}
+
 	}
 
 	/*
@@ -21,9 +27,15 @@ public class Exercises {
 	 monkeyTrouble(false, false) → true
 	 monkeyTrouble(true, false) → false
 	 */
-	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-		return false;
+	public boolean monkeyTrouble(boolean aSmile, boolean bSmile){
+		if((aSmile == true && bSmile == true) || (aSmile == false && bSmile == false)){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
+
 
 	/*
 	 3. Given two int values, return their sum. Unless the two values are the same, then return double their sum.
@@ -32,7 +44,12 @@ public class Exercises {
 	 sumDouble(2, 2) → 8
 	 */
 	public int sumDouble(int a, int b) {
-		return 0;
+		if (a==b){
+			return 2*(a+b);
+		}
+		else{
+			return a+b;
+		}
 	}
 
 	/*
@@ -45,7 +62,12 @@ public class Exercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
-		return 0;
+		if(n<=21) {
+			return 21 - n;
+		} else {
+			return (n - 21) * 2;
+		}
+
 	}
 
 	/*
@@ -57,7 +79,13 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		return false;
+		if((hour<7 || hour>20) && talking == true){
+			return true;
+		}
+
+		else{
+			return false;
+		}
 	}
 
 	/*
