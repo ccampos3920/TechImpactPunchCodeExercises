@@ -239,15 +239,21 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
-		if (((a>=10 && a<=20) && (b>=10 && b<=20)) && (a>=b)) {
+		if ((a >= 10 && a <= 20) && (b >= 10 && b <= 20)) {
+			if (a > b){
+				return a;
+			}
+			else {
+				return b;
+			}
+		}
+		else if  ((a >= 10 && a <= 20) && (b < 10 || b > 20)) {
 			return a;
 		}
-		else if((b>=10 && b<=20) && (b>=10&&b<=20) && (b>a)){
+		else if ((b >= 10 && b <= 20) && (a < 10 || a > 20)) {
 			return b;
 		}
-		else {
-			return 0;
-		}
+		return 0;
 	}
 
 	/*
@@ -354,38 +360,28 @@ public class Exercises {
      yourCakeAndEatItToo(11.00, false) → "special"
      */
     public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-		if(isBirthday == true) {
-			mealAmount = mealAmount + 5.00;
-		}
-		else if(isBirthday== false){
-			mealAmount = mealAmount;
-		}
 
-		else if(mealAmount<=10.00 && isBirthday==false){
-			return "standard";
-		}
+	if(isBirthday == true && mealAmount>=10.01){
+		return "ginormous";
+	}
 
-		else if(mealAmount<=15.00 && isBirthday==false){
-			return "special";
-		}
+	if(isBirthday == true && mealAmount>=5.01){
+		return "special";
+	}
+	if (isBirthday == true && mealAmount <5.00){
+		return "standard";
+	}
+	if(isBirthday==false && mealAmount<=10){
+		return "standard";
+	}
+	if(isBirthday==false && mealAmount<=15){
+		return "special";
+	}
+	else{
+		return "ginormous";
+	}
 
-		else if(mealAmount>15.00 && isBirthday==false){
-			return "ginormous";
-		}
 
-		else if(mealAmount<=10.00 && isBirthday==true){
-			return "standard";
-		}
-
-		else if(mealAmount<=15.00 && isBirthday==true){
-			return "special";
-		}
-
-		else if(mealAmount>15.00 && isBirthday==true){
-			return "ginormous";
-		}
-
-		return "";
     }
 
 	/*
@@ -424,7 +420,17 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
-		return false;
+		if(n>=1 && n<=10){
+			return true;
+		}
+		else if(outsideMode==true && n<=1 || n>=10){
+			return true;
+		}
+		else if(outsideMode==false && n>=1 && n>=10){
+			return false;
+		}
+
+			return false;
 	}
 
 	/*
@@ -436,6 +442,9 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
+		if(n%11==0 || n%11==0+1){
+			return true;
+		}
 		return false;
 	}
 
@@ -447,6 +456,9 @@ public class Exercises {
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
+		if(n%20==0+1 || n%20==0+2){
+			return true;
+		}
 		return false;
 	}
 
@@ -458,6 +470,18 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
+		if(n%3==0 && !(n%5==0)){
+			return true;
+		}
+
+		else if(n%5==0 && !(n%3==0)){
+			return true;
+		}
+
+		else if (n%3==0 && n%5==0){
+			return false;
+		}
+
 		return false;
 	}
 
