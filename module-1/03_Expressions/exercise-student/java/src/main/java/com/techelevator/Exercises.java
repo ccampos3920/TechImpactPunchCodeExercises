@@ -510,6 +510,7 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
+
 		return false;
 	}
 
@@ -521,6 +522,12 @@ public class Exercises {
 	 teenSum(13, 2) → 19
 	 */
 	public int teenSum(int a, int b) {
+		if(a>=13 && a<=19 || b>=13 && b<=19){
+			return 19;
+		}
+		else if (a<13 || a>19 && b<13 || b>19){
+			return a+b;
+		}
 		return 0;
 	}
 
