@@ -419,17 +419,29 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
-		if(n>=1 && n<=10){
+		if (n >= 1 && n <= 10 && outsideMode == true) {
 			return true;
 		}
-		else if(outsideMode==true && n<=1 || n>=10){
+		else if(n>=1 && n<=10 && outsideMode==false){
 			return true;
 		}
-		else if(outsideMode==false && n>=1 && n>=10){
+
+		else if (n>10 && outsideMode==false){
 			return false;
 		}
 
+		else if (n>10 && outsideMode==true){
+			return true;
+		}
+
+		else if (n<1 && outsideMode==false){
 			return false;
+		}
+		else if (n<0 && outsideMode==false){
+			return true;
+		}
+
+		return false;
 	}
 
 	/*
@@ -569,25 +581,21 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
-		if (tea<5 || candy<5){
+//		int bad = 0;
+//		int good = 1;
+//		int great = 2;
+
+
+		if (candy < 5 || tea < 5) {
 			return 0;
-		}
-
-		else if(tea>=5 && candy>=5){
-			return 1;
-		}
-
-		else if(tea<candy*2){
+		} else if (tea / candy >= 2 || candy / tea >= 2) {
 			return 2;
 		}
 
-		else if (candy<tea*2){
-			return 2;
-		}
-
-
-		return 0;
+		return 1;
 	}
+
+
 
 	/*
 	 31. Given three ints, a b c, return true if it is possible to add two of the ints to get the third.
@@ -596,10 +604,6 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
-		if(){
-			return true;
-
-		}
 		return false;
 	}
 
