@@ -569,6 +569,23 @@ public class Exercises {
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
+		if (tea<5 || candy<5){
+			return 0;
+		}
+
+		else if(tea>=5 && candy>=5){
+			return 1;
+		}
+
+		else if(tea<candy*2){
+			return 2;
+		}
+
+		else if (candy<tea*2){
+			return 2;
+		}
+
+
 		return 0;
 	}
 
@@ -579,6 +596,10 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
+		if(){
+			return true;
+
+		}
 		return false;
 	}
 
