@@ -408,7 +408,24 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
-		return "";
+		String results = "";
+		if (day >= 1 && day <= 5 && vacation == true) {
+			return results = "10:00";
+		}
+
+		if (day >= 0 && day <= 6 && vacation == true) {
+			return results = "off";
+		}
+
+		if(day>=1 && day<=5 && vacation==false){
+			return results = "7:00";
+		}
+		if (day>=0 && day<=6){
+			return results = "10:00";
+		}
+
+
+		return results;
 	}
 
 	/*
@@ -419,29 +436,22 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
-		if (n >= 1 && n <= 10 && outsideMode == true) {
-			return true;
+		if (!outsideMode){
+			if (n >= 1 && n <= 10) {
+				return true;
+			}
+			else {
+				return false;
+			}
 		}
-		else if(n>=1 && n<=10 && outsideMode==false){
-			return true;
+		else {
+			if (n <= 1 || n >= 10) {
+				return true;
+			}
+			else {
+				return false;
+			}
 		}
-
-		else if (n>10 && outsideMode==false){
-			return false;
-		}
-
-		else if (n>10 && outsideMode==true){
-			return true;
-		}
-
-		else if (n<1 && outsideMode==false){
-			return false;
-		}
-		else if (n<0 && outsideMode==false){
-			return true;
-		}
-
-		return false;
 	}
 
 	/*
@@ -604,6 +614,18 @@ public class Exercises {
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
+		if(a+b==c){
+			return true;
+		}
+		else if (a-b==c){
+			return true;
+		}
+		else if (b+a==c){
+			return true;
+		}
+		else if (b-a==c){
+			return true;
+		}
 		return false;
 	}
 
