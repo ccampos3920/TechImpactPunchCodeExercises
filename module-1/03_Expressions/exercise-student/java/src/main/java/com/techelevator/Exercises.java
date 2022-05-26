@@ -260,8 +260,21 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
-		if (cigars>=40 && cigars<=60)
-		return false;
+		if (cigars>=40 && cigars<=60){
+			return true;
+		}
+		else if(isWeekend==true && cigars>39){
+			return true;
+		}
+		else if(cigars>=40 && cigars <=60 && isWeekend==false){
+			return true;
+		}
+		else if (cigars<40 && cigars>60 && isWeekend==true){
+			return false;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/*
