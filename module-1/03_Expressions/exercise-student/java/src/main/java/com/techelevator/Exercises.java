@@ -354,7 +354,38 @@ public class Exercises {
      yourCakeAndEatItToo(11.00, false) → "special"
      */
     public String yourCakeAndEatItToo(double mealAmount, boolean isBirthday) {
-        return "";
+		if(isBirthday == true) {
+			mealAmount = mealAmount + 5.00;
+		}
+		else if(isBirthday== false){
+			mealAmount = mealAmount;
+		}
+
+		else if(mealAmount<=10.00 && isBirthday==false){
+			return "standard";
+		}
+
+		else if(mealAmount<=15.00 && isBirthday==false){
+			return "special";
+		}
+
+		else if(mealAmount>15.00 && isBirthday==false){
+			return "ginormous";
+		}
+
+		else if(mealAmount<=10.00 && isBirthday==true){
+			return "standard";
+		}
+
+		else if(mealAmount<=15.00 && isBirthday==true){
+			return "special";
+		}
+
+		else if(mealAmount>15.00 && isBirthday==true){
+			return "ginormous";
+		}
+
+		return "";
     }
 
 	/*
@@ -365,7 +396,11 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		int sum = a+b;
+		if(sum>=10 && sum <=19){
+			return 20;
+		}
+		else return sum;
 	}
 
 	/*
