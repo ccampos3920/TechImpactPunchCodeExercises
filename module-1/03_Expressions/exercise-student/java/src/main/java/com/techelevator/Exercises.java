@@ -127,6 +127,9 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
+		if (n%3==0 || n%5==0){
+			return true;
+		}
 		return false;
 	}
 
@@ -137,7 +140,12 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
-		return false;
+		if((temp1<0 && temp2>100) || (temp1>100 && temp2<0)){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	/*
@@ -147,6 +155,9 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+		if((a>=10 && a<=20) || (b<=20 && b>=10)){
+			return true;
+		}
 		return false;
 	}
 
@@ -158,6 +169,9 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+		if((a>=13 && a<=19) || (b<=19 && b>=13) || (c>=13 && c<=19)){
+			return true;
+		}
 		return false;
 	}
 
