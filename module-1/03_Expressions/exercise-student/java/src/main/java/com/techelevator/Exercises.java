@@ -289,6 +289,29 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
+		if(you<5 && date<5){
+			return 0;
+		}
+		else if(you>8 && date>8){
+			return 2;
+		}
+		else if (you ==5 && date ==5){
+			return 1;
+		}
+		else if(you>=8 && date<=2){
+			return 0;
+		}
+		else if (date>=8 && you<=2){
+			return 0;
+		}
+
+		else if (you>=5 && date>=8){
+			return 2;
+		}
+
+		else if (date>=5 && you>=8){
+			return 2;
+		}
 		return 0;
 	}
 
