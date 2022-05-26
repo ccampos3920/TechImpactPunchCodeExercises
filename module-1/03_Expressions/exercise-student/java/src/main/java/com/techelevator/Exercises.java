@@ -227,7 +227,6 @@ public class Exercises {
 		else if((a>=40 && a<=50) && (b>=40 && b<=50)) {
 			return true;
 		}
-
 		return false;
 	}
 
@@ -539,6 +538,24 @@ public class Exercises {
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
+		if(isMorning==true && isMom==true && isAsleep ==false){
+			return true;
+		}
+
+		if(isMorning==false && isMom==false && isAsleep==false){
+			return true;
+		}
+
+		if (isMorning==false &&  isMom==true && isAsleep==false){
+			return true;
+		}
+
+		else if(isAsleep==true){
+			return false;
+		}
+
+
+
 		return false;
 	}
 
