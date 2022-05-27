@@ -655,21 +655,14 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		if (a == 13) {
+		if(a == 13)
 			return 0;
-		}
-		else if (b == 13) {
+		if(b == 13)
 			return a;
-		}
-		else if (c == 13) {
-			return a+b;
-		}
-		else if (a==13 && b==13 && c != 13) {
-			return 0;
-		}
+		if(c == 13)
+			return (a + b);
+		return (a + b + c);
 
-		else {
-			return a+b+c;
-		}
-	}
+}
+
 }
