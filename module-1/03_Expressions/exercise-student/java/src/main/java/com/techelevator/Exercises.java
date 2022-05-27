@@ -531,8 +531,11 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
-
-		return false;
+		if (num % 10 < 3 || num % 10 >=8)
+		return true;
+		else {
+			return false;
+		}
 	}
 
 	/*
@@ -637,8 +640,16 @@ public class Exercises {
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		if(bOk && c > b){
+			return true;
+		}
+		else if(b > a && c > b){
+			return true;
+		}
 		return false;
 	}
+
+
 
 	/*
 	 33. Given three ints, a b c, return true if they are in strict increasing order, such as 2 5 11,
@@ -649,6 +660,12 @@ public class Exercises {
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+		if(equalOk && b - a >= 0 && c - b >= 0){
+			return true;
+		}
+		if(b - a > 0 && c - b > 0){
+			return true;
+		}
 		return false;
 	}
 
@@ -660,7 +677,19 @@ public class Exercises {
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		if(a == b && b == c){
+			return 0;
+		}
+		if(b == c){
+			return a;
+		}
+		if(c == a){
+			return b;
+		}
+		if(a == b){
+			return c;
+		}
+		return a + b + c;
 	}
 
 	/*
@@ -674,7 +703,15 @@ public class Exercises {
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		if(a == 13) {
+			return 0;
+		} else if(b == 13) {
+			return a;
+		} else if(c == 13) {
+			return a + b;
+		} else {
+			return a + b + c;
+		}
 	}
 
 }
