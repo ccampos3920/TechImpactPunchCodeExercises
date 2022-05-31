@@ -2,7 +2,7 @@
 
 The purpose of this exercise is to reinforce your understanding of expressions, statements, blocks, and logical branching.
 
-This exercise consists of small coding problems that you can solve with expressions and conditional code. There are seven main exercises that have three problems each. The problems relate to each other, with each one requiring you to handle additional complexity. The main exercises aren't related to each other, and while they're numbered in a suggested order, you can complete them in any order.
+This exercise consists of thirty-five small coding problems. Each problem is independent of the others, and they can be solved in any order.
 
 ## Learning objectives
 
@@ -17,7 +17,7 @@ After completing this exercise, you'll understand:
 
 * The project must not have any build errors.
 * Unit tests pass as expected.
-* Code uses appropriate variable names and data types.
+* Appropriate variable names and data types are used.
 
 ## Getting started
 
@@ -32,19 +32,19 @@ After completing this exercise, you'll understand:
 
 Before each method, there's a description of the problem you need to solve and examples with expected output. Use these examples to get an idea of the values you need to write your code around. It may help to keep track of the state of variables on a piece of paper as you work through your code.
 
-For example, in the comments before the `acceptPackage` method, there's a section that includes the method name and the expected value that's returned for each method call. The following example shows that when the method is called with `20`, it returns `true`, when it's called with `40`, it returns `true`, and when it's called with `50`, it returns `false`:
+For example, in the comments before the `more20` method, there's a section that includes the method name and the expected value that's returned for each method call. The following example shows that when the method is called with 20, it returns false, when it's called with 21, it returns true, and when it's called with 22, it returns true:
 
-```
-acceptPackage(20) ➔ true
-acceptPackage(40) ➔ true
-acceptPackage(50) ➔ false
-```
+    ```
+    more20(20) → false
+    more20(21) → true
+    more20(22) → true
+    ```
 
 ### Check test output if your tests are failing
 
-If your tests fail, check the output of the test run. The test results display the input and expected output for each failing tests. In software development, unit tests can provide helpful clues and information that could be valuable when troubleshooting.
+If your tests fail, check the output of the test run. It provides helpful clues and information that could be valuable when troubleshooting.
 
-You can also run the tests in debug mode when executing the tests. This allows you to set a "breakpoint", which stops the code at certain points in the editor. You can then look at the values of variables while the test runs, and step through code line-by-line as it runs. Don't hesitate to use the debugging capabilities in IntelliJ to help resolve issues.
+You can also run the tests in debug mode when executing the tests. This allows you to set a "breakpoint", which stops the code at certain points in the editor. You can then look at the values of variables while the test runs, and can also see what code is currently being executed. Don't hesitate to use the debugging capabilities in IntelliJ to help resolve issues.
 
 ### Don't linger too long on one problem
 
