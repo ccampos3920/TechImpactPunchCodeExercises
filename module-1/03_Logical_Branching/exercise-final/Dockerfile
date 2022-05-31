@@ -11,6 +11,12 @@ WORKDIR /app
 ARG SUBMISSION_SUBFOLDER
 COPY $SUBMISSION_SUBFOLDER /app
 
+<<<<<<< HEAD
+=======
+# Remove all tests in the student's submission
+RUN rm -rf /app/src/test/*
+
+>>>>>>> 52152c6efe7fe97a5233baff773a4fc5ff37a285
 # Overwrite files in student fork with upstream files
 COPY src/test/java/com/techelevator /app/src/test/java/com/techelevator
 COPY pom.xml ./
