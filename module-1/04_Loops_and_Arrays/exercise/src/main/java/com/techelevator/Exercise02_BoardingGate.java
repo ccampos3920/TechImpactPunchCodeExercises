@@ -22,17 +22,21 @@ public class Exercise02_BoardingGate {
     generateSeatingChart(7) → [true, true, true, true, true, true, true]
     generateSeatingChart(5) → [true, true, true, true, true]
     generateSeatingChart(2) → [true, true]
+
+    i += 2
      */
+
+
     public boolean[] generateSeatingChart(int numberOfSeats) {
-//        for(int i = 0; i<numberOfSeats; i++) {
-//            if(number)
-//
-//
-//            return new boolean[]{
-//                    TRUE
-//            };
-//        }
-        return generateSeatingChart(7);
+        boolean[] openSeatCount = new boolean[numberOfSeats];
+
+        // code goes here
+        for(int i=0; i<numberOfSeats; i++){
+            openSeatCount[i]= true;
+
+        }
+
+        return openSeatCount;
     }
 
     /*
@@ -48,9 +52,17 @@ public class Exercise02_BoardingGate {
     getAvailableSeatCount([true, true, true, false]) → 3
     getAvailableSeatCount([]) → 0
      */
-    public int getAvailableSeatCount(boolean[] seatingChart) {
-        return 0;
-    }
+
+//    public int getAvailableSeatCount(boolean[] seatingChart) {
+//        boolean[] availableSeats = new boolean[seatingChart];
+//
+//        for(int i=0; i<seatingChart; i++){
+//
+//        }
+//        return count;
+//
+//
+//    }
 
     /*
     The crew determined that it would be nice to know how many rows on the plane are at full occupancy.

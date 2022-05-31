@@ -38,10 +38,19 @@ public class Exercise03_Shirts {
     buildBulkOrder(4) → ['S', 'M', 'L', 'S']
     buildBulkOrder(0) → []
      */
-    public char[] buildBulkOrder(int numberOfShirts) { 
-        return new char[] {};    
+    public char[] buildBulkOrder(int numberOfShirts) {
+        char[] dShirts = new char[numberOfShirts];
+        int i = 0;
+        int size = i % 3;
+        if (size == 0) {
+            dShirts[i] = SMALL_TSHIRT;
+        } else if (size == 1) {
+            dShirts[i] = MEDIUM_TSHIRT;
+        } else {
+            dShirts[i] = LARGE_TSHIRT;
+        }
+        return dShirts;
     }
-
     /*
     The warehouse is out of small shirts and will only request more when the
     next order comes in that includes an 'S' shirt.
