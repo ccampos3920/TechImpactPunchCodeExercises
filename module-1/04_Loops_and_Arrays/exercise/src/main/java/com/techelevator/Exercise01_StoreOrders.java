@@ -63,15 +63,14 @@ public class Exercise01_StoreOrders {
     getCalzoneSales([]) → 0
      */
     public int getCalzoneSales(int[] orders) {
-        boolean calzoneF = false;
-        for(int c = 0; c<6; c++){
+        int calzoneCount = 0;
 
-            int counter = 0;
-            counter++;
-            c++;
+        for(int i =0; i<orders.length; i++){
+            if(orders[i] == 40){
+                calzoneCount++;
+            }
         }
-
-        return 0;
+        return calzoneCount;
     }
 
     /*
@@ -89,6 +88,21 @@ public class Exercise01_StoreOrders {
     getCheesePizzaRevenue([11, 21]) → 0
      */
     public int getCheesePizzaRevenue(int[] orders) {
-        return 0;
+        int cheesePizzaTotal = 0;
+
+        for(int i = 0; i<orders.length; i++){
+            if(orders[i]==10){
+                cheesePizzaTotal += 8;
+            }
+
+            if(orders[i]==20){
+                cheesePizzaTotal += 11;
+            }
+
+            if(orders[i]==30){
+                cheesePizzaTotal += 14;
+            }
+        }
+        return cheesePizzaTotal;
     }
 }
