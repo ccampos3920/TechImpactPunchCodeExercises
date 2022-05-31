@@ -43,8 +43,13 @@ public class Exercise01_StoreOrders {
 	 createOrder() → [10, 40, 31, 41]
      */
     public int[] createOrder() {
-        return new int[] {};
+
+        return new int[] {
+                SMALL_CHEESE,CALZONE,LARGE_PEPPERONI,SPAGHETTI_PIE
+        };
     }
+
+
 
     /*
     Sally realized that she needed to know how many calzones her shop sells per day.
@@ -58,6 +63,14 @@ public class Exercise01_StoreOrders {
     getCalzoneSales([]) → 0
      */
     public int getCalzoneSales(int[] orders) {
+        boolean calzoneF = false;
+        for(int c = 0; c<6; c++){
+
+            int counter = 0;
+            counter++;
+            c++;
+        }
+
         return 0;
     }
 
