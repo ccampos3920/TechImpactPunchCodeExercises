@@ -40,14 +40,16 @@ public class Exercise03_Shirts {
      */
     public char[] buildBulkOrder(int numberOfShirts) {
         char[] dShirts = new char[numberOfShirts];
-        int i = 0;
-        int size = i % 3;
-        if (size == 0) {
-            dShirts[i] = SMALL_TSHIRT;
-        } else if (size == 1) {
-            dShirts[i] = MEDIUM_TSHIRT;
-        } else {
-            dShirts[i] = LARGE_TSHIRT;
+        for (int i = 0; i < dShirts.length; i++) {
+            int size = i % 3;
+            if (size == 0) {
+                dShirts[i] = SMALL_TSHIRT;
+            } else if (size == 1) {
+                dShirts[i] = MEDIUM_TSHIRT;
+            } else {
+                dShirts[i] = LARGE_TSHIRT;
+            }
+
         }
         return dShirts;
     }
@@ -65,6 +67,11 @@ public class Exercise03_Shirts {
     placeRequest([]) → false
      */
     public boolean placeRequest(char[] order) {
+        for(int i = 0; i<order.length; i++) {
+            if (order[i] == 'S') {
+                return true;
+            }
+        }
         return false; 
     }
 }
