@@ -11,10 +11,19 @@ public class Fibonacci {
 		String integerInput = userInput.nextLine();
 		int number = Integer.parseInt(integerInput);
 		int a = 0;
+		int b = 1;
 		for(int i=0; i<=number; i++){
-			a = i;
-			a = a+i;
-			System.out.print(i + " ");
+
+			System.out.print(a+ " ,");
+
+			int c=a+b;
+			a=b;
+			b=c;
+
+			if(a>number){
+				break;
+			}
+
 		}
 
 	}
