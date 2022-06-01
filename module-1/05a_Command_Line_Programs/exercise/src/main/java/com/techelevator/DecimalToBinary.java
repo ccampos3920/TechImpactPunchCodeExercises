@@ -1,10 +1,15 @@
 package com.techelevator;
 
+import java.util.Scanner;
+
 public class DecimalToBinary {
 
 	public static void main(String[] args) {
-	System.out.print("Enter the decimal to convert to binary");
-	System.
+
+		Scanner userInput = new Scanner(System.in);
+		System.out.print("Please enter in a series of decimal values (separated by spaces):");
+		String decimalInput = userInput.nextLine();
+		int decimal = Integer.parseInt(decimalInput);
 
 	}
 
