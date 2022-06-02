@@ -214,10 +214,13 @@ public class Exercises {
 	 endsLy("oddy") → false
 	 */
 	public boolean endsLy(String str) {
-		if(str.substring()=="ly"){
-			return true;
+		int len = str.length();
+		if (len < 2) {
+			return false;
 		}
-		return false;
+		else {
+			return (str.substring(len - 2).equals("ly"));
+		}
 	}
 
 	/*
@@ -228,7 +231,7 @@ public class Exercises {
 	 nTwice("Chocolate", 1) → "Ce"
 	 */
 	public String nTwice(String str, int n) {
-		return null;
+		return str.substring(0,n) + str.substring(str.length()- n, str.length());
 	}
 
 	/*
@@ -240,7 +243,12 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int index) {
-		return null;
+		if (str.length() <= index + 1 || index < 0) {
+			return str.substring(0, 2);
+		}
+  else {
+			return str.substring(index, index + 2);
+		}
 	}
 
 	/*
@@ -251,7 +259,9 @@ public class Exercises {
 	 middleThree("solving") → "lvi"
 	 */
 	public String middleThree(String str) {
-		return null;
+		int length = str.length()/2;
+
+		return str.substring(length-1, length+2);
 	}
 
 	/*
@@ -263,7 +273,20 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
+		if(str.length() < 3) {
+			return false;
+		}
+  else if ((str.substring(0,3)).equals("bad")){
+			return true;
+		}
+  else if (str.length() > 3){
+
+			if ((str.substring(1,4)).equals("bad"))
+
+			return true;
+		}
 		return false;
+
 	}
 
 	/*
@@ -273,7 +296,11 @@ public class Exercises {
 	 stringTimes("Hi", 1) → "Hi"
 	 */
 	public String stringTimes(String str, int n) {
-		return null;
+		String eSpace = "";
+		for (int i = 0; i < n; i++) {
+			eSpace += str;
+		}
+		return eSpace;
 	}
 
 	/*
@@ -284,7 +311,19 @@ public class Exercises {
 	 frontTimes("Abc", 3) → "AbcAbcAbc"
 	 */
 	public String frontTimes(String str, int n) {
-		return null;
+		int len = str.length();
+		String temp = "";
+		if (len < 4) {
+			for (int i = 0; i < n; i++) {
+				temp += str;
+			}
+		} else {
+			for (int j = 0; j < n; j++) {
+				temp += str.substring(0,3);
+			}
+		}
+
+		return temp;
 	}
 
 	/*
@@ -294,7 +333,12 @@ public class Exercises {
 	 countXX("xxxx") →
 	 */
 	public int countXX(String str) {
-		return 0;
+		int count = 0;
+		for(int i = 0; i < str.length() - 1; i++) {
+			if(str.substring(i, i + 2).equals("xx"))
+				count++;
+		}
+		return count;
 	}
 
 	/*
