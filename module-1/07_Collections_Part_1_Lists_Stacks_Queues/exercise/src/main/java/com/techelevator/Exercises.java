@@ -18,8 +18,8 @@ public class Exercises {
 	public List<String> array2List(String[] stringArray) {
 		List<String> array2List = new ArrayList<String>();
 
-		for(String fruit : stringArray){
-			array2List.add(fruit);
+		for(String items : stringArray){
+			array2List.add(items);
 		}
 		return array2List;
 	}
@@ -75,7 +75,16 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 81238
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		int largestNum = 0;
+		for(int compareNum : integerList){
+			if(largestNum < compareNum){
+			largestNum = compareNum;
+//				System.out.println(largestNum);
+//			return largestNum;
+			}
+			System.out.println(largestNum);
+		}
+		return largestNum;
 	}
 
 	/*
