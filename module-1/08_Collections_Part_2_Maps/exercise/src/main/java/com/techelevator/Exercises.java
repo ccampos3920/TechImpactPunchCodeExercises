@@ -34,7 +34,24 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		Map<String, String> animalGroupName = new HashMap<String, String>();
+		animalGroupName.put("rhino", "Crash");
+		animalGroupName.put("giraffe", "Tower");
+		animalGroupName.put("elephant", "Herd");
+		animalGroupName.put("lion", "Pride");
+		animalGroupName.put("crow", "Murder");
+		animalGroupName.put("pigeon", "Kit");
+		animalGroupName.put("flamingo", "Pat");
+		animalGroupName.put("deer", "Herd");
+		animalGroupName.put("dog", "Pack");
+		animalGroupName.put("crocodile", "Float");
+
+		if(animalName != null && animalGroupName.containsKey(animalName.toLowerCase())){
+			return animalGroupName.get(animalName.toLowerCase());
+		}
+		else {
+			return "unknown";
+		}
 	}
 
 	/*
@@ -60,7 +77,20 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		return -1.0;
+		Map <String, Double> sales = new HashMap<String, Double>();
+		sales.put("KITCHEN4001", 0.20);
+		sales.put("GARAGE1070", 0.15);
+		sales.put("LIVINGROOM", 0.10);
+		sales.put("KITCHEN6073", 0.40);
+		sales.put("BEDROOM3434", 0.60);
+		sales.put("BATH0073", 0.15);
+
+		if(itemNumber != null && sales.containsKey(itemNumber.toLowerCase())) {
+			return sales.get(itemNumber.toLowerCase());
+		}
+		else {
+			return 0.00;
+		}
 	}
 
 	/*
