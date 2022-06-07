@@ -77,16 +77,16 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		Map <String, Double> sales = new HashMap<String, Double>();
-		sales.put("KITCHEN4001", 0.20);
-		sales.put("GARAGE1070", 0.15);
-		sales.put("LIVINGROOM", 0.10);
-		sales.put("KITCHEN6073", 0.40);
-		sales.put("BEDROOM3434", 0.60);
-		sales.put("BATH0073", 0.15);
+		Map <String, Double> salesH = new HashMap<String, Double>();
+		salesH.put("KITCHEN4001", 0.20);
+		salesH.put("GARAGE1070", 0.15);
+		salesH.put("LIVINGROOM", 0.10);
+		salesH.put("KITCHEN6073", 0.40);
+		salesH.put("BEDROOM3434", 0.60);
+		salesH.put("BATH0073", 0.15);
 
-		if(itemNumber != null && sales.containsKey(itemNumber.toLowerCase())) {
-			return sales.get(itemNumber.toLowerCase());
+		if(itemNumber != null && salesH.containsKey(itemNumber.toUpperCase())) {
+			return salesH.get(itemNumber.toUpperCase());
 		}
 		else {
 			return 0.00;
@@ -104,7 +104,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		int peterDinero = peterPaul.get("Peter");
+		int paulDinero = peterPaul.get("Paul");
+		if(paulDinero < 1000 && peterDinero > 0) {
+			int borrowedM = peterDinero / 2;
+			peterPaul.put("Paul", paulDinero+ borrowedM);
+			peterPaul.put("Peter", peterDinero - borrowedM);
+		}
+
+		return peterPaul;
+
 	}
 
 	/*
@@ -117,7 +126,15 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		int petersWorth = peterPaul.get("Peter");
+		int paulsWorth = peterPaul.get("Paul");
+		if(petersWorth>=50 && paulsWorth>=100){
+			int PeterPaulPartnership = ((paulsWorth+paulsWorth)/4);
+			peterPaul.put("Paul", paulsWorth);
+			peterPaul.put("Peter", petersWorth);
+			peterPaul.put("PeterPaulPartnership", PeterPaulPartnership);
+		}
+		return peterPaul;
 	}
 
 	/*
