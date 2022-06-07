@@ -263,7 +263,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+		Map<String, Integer> wut = new HashMap<String, Integer>();
+		for(String a : words){
+			if(wut.containsKey(a)){
+				wut.put(a, wut.get(a) + 1);
+			}
+			else{
+				wut.put(a, 1);
+			}
+		}
+		return wut;
 	}
 
 }
