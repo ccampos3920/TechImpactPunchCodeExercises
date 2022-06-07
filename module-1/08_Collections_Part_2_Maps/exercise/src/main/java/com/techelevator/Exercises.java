@@ -128,7 +128,7 @@ public class Exercises {
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
 		int petersWorth = peterPaul.get("Peter");
 		int paulsWorth = peterPaul.get("Paul");
-		if(petersWorth>=50000 && paulsWorth>=100000){
+		if(petersWorth>=5000 && paulsWorth>=10000){
 			int g = petersWorth/4;
 			int h = paulsWorth/4;
 			int PeterPaulPartnership = g+h;
@@ -140,6 +140,7 @@ public class Exercises {
 			peterPaul.put("Paul", (paulsWorth));
 			peterPaul.put("Peter", (petersWorth));
 		}
+		System.out.println(peterPaul);
 		return peterPaul;
 	}
 
@@ -172,21 +173,19 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		Map<String,Integer> wordCount = new HashMap<String,Integer>();
-		int counter = 0;
-		for(String b: words){
+		Map<String,Integer> output = new HashMap<String,Integer>();
 
-			if(wordCount.containsKey(b)){
-				counter += 1;
+		for(String word : words){
+			if(output.containsKey(word)){
+				output.put(word, output.get(word) + 1);
 			}
-			else{
-				counter+=1;
+			else {
+				output.put(word, 1);
 			}
-
+			System.out.println(output);
 		}
-		return wordCount;
+		return output;
 	}
-
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the
 	 * number of times that int appears in the array.
@@ -199,8 +198,17 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
-	}
+		Map<Integer,Integer> varNum = new HashMap<Integer,Integer>();
+		for(int m: ints){
+			if(varNum.containsKey(m)){
+				varNum.put(m, varNum.get(m)+ 1);
+			}
+			else{
+				varNum.put(m, 1);
+			}
+		}
+		return varNum;
+ 	}
 
 	/*
 	 * Given an array of Strings, return a Map<String, Boolean> where each different String is a key and value
@@ -212,7 +220,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String, Boolean> tfMap = new HashMap<String, Boolean>();
+		for(String g : words){
+			if(tfMap.containsKey(g)){
+				tfMap.put(g, true);
+			}
+			else{
+				tfMap.put(g, false);
+			}
+		}
+		return tfMap;
 	}
 
 	/*
