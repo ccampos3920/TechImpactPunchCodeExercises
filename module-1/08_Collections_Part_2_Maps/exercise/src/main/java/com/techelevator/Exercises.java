@@ -128,11 +128,17 @@ public class Exercises {
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
 		int petersWorth = peterPaul.get("Peter");
 		int paulsWorth = peterPaul.get("Paul");
-		if(petersWorth>=50 && paulsWorth>=100){
-			int PeterPaulPartnership = ((paulsWorth+paulsWorth)/4);
-			peterPaul.put("Paul", paulsWorth);
-			peterPaul.put("Peter", petersWorth);
+		if(petersWorth>=50000 && paulsWorth>=100000){
+			int g = petersWorth/4;
+			int h = paulsWorth/4;
+			int PeterPaulPartnership = g+h;
+			peterPaul.put("Paul", (paulsWorth-h));
+			peterPaul.put("Peter", (petersWorth-g));
 			peterPaul.put("PeterPaulPartnership", PeterPaulPartnership);
+		}
+		else{
+			peterPaul.put("Paul", (paulsWorth));
+			peterPaul.put("Peter", (petersWorth));
 		}
 		return peterPaul;
 	}
@@ -146,7 +152,11 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String, String> beginningAndEnding = new HashMap<String, String>();
+		for (String letter: words) {
+			beginningAndEnding.put(letter.charAt(0) + "", letter.charAt(letter.length() - 1) + "");
+		}
+		return beginningAndEnding;
 	}
 
 	/*
@@ -162,7 +172,19 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		Map<String,Integer> wordCount = new HashMap<String,Integer>();
+		int counter = 0;
+		for(String b: words){
+
+			if(wordCount.containsKey(b)){
+				counter += 1;
+			}
+			else{
+				counter+=1;
+			}
+
+		}
+		return wordCount;
 	}
 
 	/*
