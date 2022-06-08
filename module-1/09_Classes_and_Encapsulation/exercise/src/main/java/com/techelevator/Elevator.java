@@ -24,6 +24,7 @@ public class Elevator {
     }
 
 
+
     void openDoor(){
         doorOpen = true;
     }

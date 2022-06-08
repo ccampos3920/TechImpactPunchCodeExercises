@@ -41,13 +41,15 @@ public class Airplane {
     public int getAvailableCoachSeats(){
         return availableCoachSeats;
     }
+
+
     public int reserveSeats(boolean forFirstClass, int totalNumberOfSeats){
-        if(forFirstClass==true){
+        if(forFirstClass){
             bookedFirstClassSeats += totalNumberOfSeats;
             return bookedFirstClassSeats;
         }
 
-        else if(forFirstClass==false){
+        else if(!forFirstClass){
             BookedCoachedSeats+= totalNumberOfSeats;
             return BookedCoachedSeats;
         }
