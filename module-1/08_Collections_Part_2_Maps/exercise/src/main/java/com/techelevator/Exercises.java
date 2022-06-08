@@ -140,7 +140,7 @@ public class Exercises {
 			peterPaul.put("Paul", (paulsWorth));
 			peterPaul.put("Peter", (petersWorth));
 		}
-		System.out.println(peterPaul);
+//		System.out.println(peterPaul);
 		return peterPaul;
 	}
 
@@ -174,7 +174,6 @@ public class Exercises {
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
 		Map<String,Integer> output = new HashMap<String,Integer>();
-
 		for(String word : words){
 			if(output.containsKey(word)){
 				output.put(word, output.get(word) + 1);
@@ -182,7 +181,7 @@ public class Exercises {
 			else {
 				output.put(word, 1);
 			}
-			System.out.println(output);
+//			System.out.println(output);
 		}
 		return output;
 	}
@@ -242,9 +241,23 @@ public class Exercises {
 	 * 	 → {"SKU1": 100, "SKU2": 64, "SKU3": 44, "SKU4": 5}
 	 *
 	 */
-	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
-			Map<String, Integer> remoteWarehouse) {
-		return null;
+	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
+
+		Map<String, Integer> invMap = new HashMap<>();
+
+		for (String h : mainWarehouse.keySet()){
+			if(remoteWarehouse.containsKey(h)){
+				invMap.put(h, (mainWarehouse.get(h) + remoteWarehouse.get(h)));
+			} else {
+				invMap.put(h, mainWarehouse.get(h));
+			}
+		}
+		for (String h : remoteWarehouse.keySet()) {
+			if (!(mainWarehouse.containsKey(h))) {
+				invMap.put(h, remoteWarehouse.get(h));
+			}
+		}
+		return invMap;
 	}
 
 	/*
@@ -266,7 +279,7 @@ public class Exercises {
 		Map<String, Integer> wut = new HashMap<String, Integer>();
 		for(String a : words){
 			if(wut.containsKey(a)){
-				wut.put(a, wut.get(a) + 1);
+				wut.put(a, wut.get(a)+1);
 			}
 			else{
 				wut.put(a, 1);
