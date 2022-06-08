@@ -46,10 +46,9 @@ public class Exercises {
 		animalGroupName.put("dog", "Pack");
 		animalGroupName.put("crocodile", "Float");
 
-		if(animalName != null && animalGroupName.containsKey(animalName.toLowerCase())){
+		if (animalName != null && animalGroupName.containsKey(animalName.toLowerCase())) {
 			return animalGroupName.get(animalName.toLowerCase());
-		}
-		else {
+		} else {
 			return "unknown";
 		}
 	}
@@ -77,7 +76,7 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		Map <String, Double> salesH = new HashMap<String, Double>();
+		Map<String, Double> salesH = new HashMap<String, Double>();
 		salesH.put("KITCHEN4001", 0.20);
 		salesH.put("GARAGE1070", 0.15);
 		salesH.put("LIVINGROOM", 0.10);
@@ -85,10 +84,9 @@ public class Exercises {
 		salesH.put("BEDROOM3434", 0.60);
 		salesH.put("BATH0073", 0.15);
 
-		if(itemNumber != null && salesH.containsKey(itemNumber.toUpperCase())) {
+		if (itemNumber != null && salesH.containsKey(itemNumber.toUpperCase())) {
 			return salesH.get(itemNumber.toUpperCase());
-		}
-		else {
+		} else {
 			return 0.00;
 		}
 	}
@@ -106,9 +104,9 @@ public class Exercises {
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
 		int peterDinero = peterPaul.get("Peter");
 		int paulDinero = peterPaul.get("Paul");
-		if(paulDinero < 1000 && peterDinero > 0) {
+		if (paulDinero < 1000 && peterDinero > 0) {
 			int borrowedM = peterDinero / 2;
-			peterPaul.put("Paul", paulDinero+ borrowedM);
+			peterPaul.put("Paul", paulDinero + borrowedM);
 			peterPaul.put("Peter", peterDinero - borrowedM);
 		}
 
@@ -128,15 +126,14 @@ public class Exercises {
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
 		int petersWorth = peterPaul.get("Peter");
 		int paulsWorth = peterPaul.get("Paul");
-		if(petersWorth>=5000 && paulsWorth>=10000){
-			int g = petersWorth/4;
-			int h = paulsWorth/4;
-			int PeterPaulPartnership = g+h;
-			peterPaul.put("Paul", (paulsWorth-h));
-			peterPaul.put("Peter", (petersWorth-g));
+		if (petersWorth >= 5000 && paulsWorth >= 10000) {
+			int g = petersWorth / 4;
+			int h = paulsWorth / 4;
+			int PeterPaulPartnership = g + h;
+			peterPaul.put("Paul", (paulsWorth - h));
+			peterPaul.put("Peter", (petersWorth - g));
 			peterPaul.put("PeterPaulPartnership", PeterPaulPartnership);
-		}
-		else{
+		} else {
 			peterPaul.put("Paul", (paulsWorth));
 			peterPaul.put("Peter", (petersWorth));
 		}
@@ -154,7 +151,7 @@ public class Exercises {
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
 		Map<String, String> beginningAndEnding = new HashMap<String, String>();
-		for (String letter: words) {
+		for (String letter : words) {
 			beginningAndEnding.put(letter.charAt(0) + "", letter.charAt(letter.length() - 1) + "");
 		}
 		return beginningAndEnding;
@@ -173,18 +170,18 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		Map<String,Integer> output = new HashMap<String,Integer>();
-		for(String word : words){
-			if(output.containsKey(word)){
+		Map<String, Integer> output = new HashMap<String, Integer>();
+		for (String word : words) {
+			if (output.containsKey(word)) {
 				output.put(word, output.get(word) + 1);
-			}
-			else {
+			} else {
 				output.put(word, 1);
 			}
 //			System.out.println(output);
 		}
 		return output;
 	}
+
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the
 	 * number of times that int appears in the array.
@@ -197,17 +194,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		Map<Integer,Integer> varNum = new HashMap<Integer,Integer>();
-		for(int m: ints){
-			if(varNum.containsKey(m)){
-				varNum.put(m, varNum.get(m)+ 1);
-			}
-			else{
+		Map<Integer, Integer> varNum = new HashMap<Integer, Integer>();
+		for (int m : ints) {
+			if (varNum.containsKey(m)) {
+				varNum.put(m, varNum.get(m) + 1);
+			} else {
 				varNum.put(m, 1);
 			}
 		}
 		return varNum;
- 	}
+	}
 
 	/*
 	 * Given an array of Strings, return a Map<String, Boolean> where each different String is a key and value
@@ -220,11 +216,10 @@ public class Exercises {
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
 		Map<String, Boolean> tfMap = new HashMap<String, Boolean>();
-		for(String g : words){
-			if(tfMap.containsKey(g)){
+		for (String g : words) {
+			if (tfMap.containsKey(g)) {
 				tfMap.put(g, true);
-			}
-			else{
+			} else {
 				tfMap.put(g, false);
 			}
 		}
@@ -245,8 +240,8 @@ public class Exercises {
 
 		Map<String, Integer> invMap = new HashMap<>();
 
-		for (String h : mainWarehouse.keySet()){
-			if(remoteWarehouse.containsKey(h)){
+		for (String h : mainWarehouse.keySet()) {
+			if (remoteWarehouse.containsKey(h)) {
 				invMap.put(h, (mainWarehouse.get(h) + remoteWarehouse.get(h)));
 			} else {
 				invMap.put(h, mainWarehouse.get(h));
@@ -276,16 +271,22 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		Map<String, Integer> wut = new HashMap<String, Integer>();
-		for(String a : words){
-			if(wut.containsKey(a)){
-				wut.put(a, wut.get(a)+1);
+		Map<String, Integer> results = new HashMap<String, Integer>();
+
+		for (String word : words) {
+			int counter = 0;
+
+			String lastTwoChar = word.substring(word.length() - 2);
+
+			for(int i = 0; i<word.length()-2 ;i++){
+				//If statement that adds 1 to th counter var if lastTwoChar variable shows up in each iteration ofthe foor loop
+				if(word.substring(i, i+2).equals(lastTwoChar)){
+					counter++;
+				}
 			}
-			else{
-				wut.put(a, 1);
-			}
+			results.put(word, counter);
 		}
-		return wut;
+		return results;
 	}
 
 }
