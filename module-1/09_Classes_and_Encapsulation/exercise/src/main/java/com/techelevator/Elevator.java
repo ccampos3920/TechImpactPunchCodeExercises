@@ -4,7 +4,8 @@ public class Elevator {
     private int currentFloor;
     private int numberOfFloors;
     private boolean doorOpen;
-    private int numberOfLevels;
+    private int numberOfLevels = 10;
+    boolean isDoorOpen;
 
     public Elevator(int numberOfLevels){
         this.numberOfLevels = numberOfLevels;
@@ -24,7 +25,6 @@ public class Elevator {
     }
 
 
-
     void openDoor(){
         doorOpen = true;
     }
@@ -34,8 +34,11 @@ public class Elevator {
     }
 
     void goUp(int desiredFloor){
-        while(!doorOpen && desiredFloor<=numberOfFloors){
-            desiredFloor+= 1;
+        while(!doorOpen && currentFloor<=numberOfFloors && currentFloor<desiredFloor){
+            currentFloor+= 1;
+        }
+        if(desiredFloor == currentFloor){
+            openDoor();
         }
     }
 
