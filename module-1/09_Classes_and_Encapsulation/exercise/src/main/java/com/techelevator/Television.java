@@ -50,10 +50,11 @@ public class Television {
 
     }
    public void raiseVolume(){
-        if(isOn && currentVolume<10){
+        if(isOn && currentVolume<=10){
             currentVolume++;
         }
     }
+
    public void lowerVolume(){
         if(isOn && currentVolume>0){
             currentVolume--;
