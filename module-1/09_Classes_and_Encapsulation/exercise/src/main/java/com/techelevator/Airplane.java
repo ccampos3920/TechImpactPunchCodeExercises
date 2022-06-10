@@ -4,63 +4,57 @@ public class Airplane {
     private String planeNumber;
     private int totalFirstClassSeats;
     private int bookedFirstClassSeats;
-    private int totalCoachSeats = 0;
-    private int BookedCoachedSeats = 0;
-    private boolean forFirstClass;
+    private int availableFirstClassSeats;
+    private int totalCoachSeats;
+    private int bookedCoachSeats;
     private int availableCoachSeats;
 
-    public Airplane(String planeNumber, int totalFirstClassSeats, int totalCoachSeats){
+    public Airplane(String planeNumber, int totalFirstClassSeats, int totalCoachSeats) {
         this.planeNumber = planeNumber;
-        this.totalFirstClassSeats= totalFirstClassSeats;
+        this.totalFirstClassSeats = totalFirstClassSeats;
         this.totalCoachSeats = totalCoachSeats;
     }
 
-    public String getPlaneNumber(){
+    public String getPlaneNumber() {
         return planeNumber;
     }
 
-    public int getTotalFirstClassSeats(){
+    public int getTotalFirstClassSeats() {
         return totalFirstClassSeats;
     }
 
-    public int getTotalCoachSeats(){
-        return totalCoachSeats;
+
+    public int getAvailableFirstClassSeats() {
+        return bookedCoachSeats - totalFirstClassSeats;
+
     }
 
-        public int getBookedFirstClassSeats(){
+    public int getBookedFirstClassSeats() {
         return bookedFirstClassSeats;
     }
 
-    public int getBookedCoachedSeats(){
-        return BookedCoachedSeats;
+    public int getTotalCoachSeats() {
+        return totalCoachSeats;
     }
 
-    public boolean getforFirstClass(){
-        return forFirstClass;
-    }
-    public int getAvailableCoachSeats(){
-        return availableCoachSeats;
+    public int getBookedCoachSeats() {
+        return bookedCoachSeats;
     }
 
-
-    public int reserveSeats(boolean forFirstClass, int totalNumberOfSeats){
-        if(forFirstClass){
-            bookedFirstClassSeats += totalNumberOfSeats;
-            return bookedFirstClassSeats;
-        }
-
-        else if(!forFirstClass){
-            BookedCoachedSeats+= totalNumberOfSeats;
-            return BookedCoachedSeats;
-        }
-
-        return totalNumberOfSeats;
-
+    public int getAvailableCoachSeats() {
+        return bookedCoachSeats - totalCoachSeats;
     }
+
+
+    public boolean reserveSeats(boolean forFirstClass, int totalNumberOfSeats) {
+
+
+
 
     }
 
 
+}
 
 
 
