@@ -1,3 +1,5 @@
+package com.techelevator;
+
 public class FruitTree {
     private String typeOfFruit;
     private int piecesOfFruitLeft;

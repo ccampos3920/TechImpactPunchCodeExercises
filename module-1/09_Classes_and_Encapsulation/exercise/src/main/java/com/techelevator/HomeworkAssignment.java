@@ -1,3 +1,6 @@
+package com.techelevator;
+
+
 public class HomeworkAssignment {
     // My variables
     private int possibleMarks;
