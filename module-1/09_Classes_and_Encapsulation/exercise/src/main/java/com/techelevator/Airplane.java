@@ -4,10 +4,8 @@ public class Airplane {
     private String planeNumber;
     private int totalFirstClassSeats;
     private int bookedFirstClassSeats;
-    private int availableFirstClassSeats;
     private int totalCoachSeats;
     private int bookedCoachSeats;
-    private int availableCoachSeats;
 
     public Airplane(String planeNumber, int totalFirstClassSeats, int totalCoachSeats) {
         this.planeNumber = planeNumber;
@@ -15,6 +13,7 @@ public class Airplane {
         this.totalCoachSeats = totalCoachSeats;
     }
 
+    //Setters and getters
     public String getPlaneNumber() {
         return planeNumber;
     }
@@ -23,15 +22,10 @@ public class Airplane {
         return totalFirstClassSeats;
     }
 
-
-    public int getAvailableFirstClassSeats() {
-        return bookedCoachSeats - totalFirstClassSeats;
-
-    }
-
     public int getBookedFirstClassSeats() {
         return bookedFirstClassSeats;
     }
+
 
     public int getTotalCoachSeats() {
         return totalCoachSeats;
@@ -41,29 +35,29 @@ public class Airplane {
         return bookedCoachSeats;
     }
 
-    public int getAvailableCoachSeats() {
-        return bookedCoachSeats - totalCoachSeats;
+    public int getAvailableFirstClassSeats() {
+        return totalFirstClassSeats - bookedFirstClassSeats;
     }
 
+    public int getAvailableCoachSeats() {
+        return totalCoachSeats - bookedCoachSeats;
+    }
 
     public boolean reserveSeats(boolean forFirstClass, int totalNumberOfSeats) {
-        if (forFirstClass) {
-            bookedFirstClassSeats += totalNumberOfSeats;
-            if (totalNumberOfSeats > getAvailableFirstClassSeats()) {
+        if (forFirstClass == true) {
+            if (getAvailableFirstClassSeats() >= totalNumberOfSeats) {
+                bookedFirstClassSeats += totalNumberOfSeats;
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            if (getAvailableCoachSeats() >= totalNumberOfSeats) {
+                bookedCoachSeats += totalNumberOfSeats;
+                return true;
+            } else {
                 return false;
             }
         }
-        else {
-            bookedCoachSeats += totalNumberOfSeats;
-            if (totalNumberOfSeats > getAvailableCoachSeats()) {
-                return false;
-            }
-        }
-        return true;
     }
 }
-
-
-
-
-
