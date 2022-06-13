@@ -1,8 +1,8 @@
 package com.techelevator;
 
 public class BankAccount {
-    private String accountHolderName;
-    private String accountNumber;
+    private final String accountHolderName;
+    private final String accountNumber;
     private int balance;
 
     public BankAccount(String accountHolderName, String accountNumber){
@@ -38,3 +38,4 @@ public class BankAccount {
         return balance;
     }
 }
+
