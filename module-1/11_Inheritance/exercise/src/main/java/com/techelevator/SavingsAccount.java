@@ -9,5 +9,17 @@ public class SavingsAccount extends BankAccount{
         super(accountHolderName, accountNumber, balance);
     }
 
+    @Override
+    public int withdraw(int amountToWithdraw){
+
+            if(getBalance() - amountToWithdraw >= 2){
+                super.withdraw(amountToWithdraw);
+
+                if(getBalance() < 150){
+                    super.withdraw(2);
+            }
+        }
+        return getBalance();
+    }
 
 }
