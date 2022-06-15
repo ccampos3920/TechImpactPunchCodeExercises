@@ -18,5 +18,4 @@ public abstract class Wall extends PaintCalculator{
     }
 
     public abstract int getArea();
-
 }
