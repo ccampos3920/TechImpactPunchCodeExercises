@@ -5,15 +5,23 @@ import java.util.Scanner;
 
 public class WordSearch {
 
-	Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		File file = new File("alices_adventures_in_wonderland.txt");
-		Scanner dataInput = new Scanner("alices_adventures_in_wonderland.txt");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("What is the fully qualified name of the file that should be searched? ");
+		String fileName = sc.nextLine();
 
-		while(!dataInput.hasNextLine()){
+		System.out.println("What is the search word you are looking for?");
+		String word = sc.nextLine();
+
+		File file = new File(fileName);
+		Scanner dataInput = new Scanner(fileName);
+		int i = 1;
+
+		while(dataInput.hasNextLine()){
 		String lineOfInput = dataInput.nextLine();
-		System.out.println(lineOfInput + " ");
+		System.out.println(i + " " + lineOfInput);
+		i++;
 		}
 
 	}
