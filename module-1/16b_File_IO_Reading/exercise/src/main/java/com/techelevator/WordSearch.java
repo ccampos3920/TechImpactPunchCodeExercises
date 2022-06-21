@@ -17,25 +17,32 @@ public class WordSearch {
 		System.out.println("What is the search word you are looking for? ");
 		String word = sc.nextLine();
 
-		File file = new File(filePath);
-		int i = 1;
+		System.out.println("Should the search be case sensitive? (Y\\N)? ");
+		String caseS = sc.nextLine();
 
+		File file = new File(filePath);
+
+		int i = 0;
 		try (Scanner fileInput = new Scanner(file)) {
 			while (fileInput.hasNextLine()) {
 				String lineOfInput = fileInput.nextLine();
 				i++;
 
-				if (lineOfInput.contains(word)) {
-					System.out.println(i + ") " + lineOfInput);
+				if(caseS.equals("Y")) {
+					if (lineOfInput.contains(word)) {
+						System.out.println(i + ") " + lineOfInput);
+					}
 				}
+				else{
+					if(lineOfInput.toLowerCase().contains(word.toLowerCase())){
+						System.out.println(i + ") " + lineOfInput);
+					}
+				}
+
 			}
-
-
 		}
 		catch (FileNotFoundException e) {
-				// Could not find the file at the specified path
-				System.out.println("The file was not found: " + filePath);
-
+			System.out.println("The file was not found: " + filePath);
 		}
 
 	}
