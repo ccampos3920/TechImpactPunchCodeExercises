@@ -1,0 +1,1 @@
+/Users/punchcode/Desktop/cristian-campos-student-code/module-1/17_File_IO_Writing/exercise/src/test/resources/bacon-emoji.txt
