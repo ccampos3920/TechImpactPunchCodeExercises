@@ -362,10 +362,10 @@ public class ExercisesTest {
 
 	private static SingleConnectionDataSource createDatasource(String defaultDbName) {
 		String host = System.getenv("DB_HOST") != null ? System.getenv("DB_HOST") : "localhost";
-		String port = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "5432";
+		String port = System.getenv("DB_PORT") != null ? System.getenv("DB_PORT") : "5433";
 		String dbName = System.getenv("DB_DATABASE") != null ? System.getenv("DB_DATABASE") : defaultDbName;
 		String username = System.getenv("DB_USERNAME") != null ? System.getenv("DB_USERNAME") : "postgres";
-		String password = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "postgres1";
+		String password = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : "punchcode";
 
 		String url = String.format("jdbc:postgresql://%s:%s/%s", host, port, dbName);
 
