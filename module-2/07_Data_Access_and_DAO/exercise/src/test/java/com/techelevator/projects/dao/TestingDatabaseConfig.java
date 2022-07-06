@@ -21,13 +21,13 @@ public class TestingDatabaseConfig {
     private static final String DB_HOST =
             Objects.requireNonNullElse(System.getenv("DB_HOST"), "localhost");
     private static final String DB_PORT =
-            Objects.requireNonNullElse(System.getenv("DB_PORT"), "5432");
+            Objects.requireNonNullElse(System.getenv("DB_PORT"), "5433");
     private static final String DB_NAME =
             Objects.requireNonNullElse(System.getenv("DB_NAME"), "EmployeeProjectsTesting");
     private static final String DB_USER =
             Objects.requireNonNullElse(System.getenv("DB_USER"), "postgres");
     private static final String DB_PASSWORD =
-            Objects.requireNonNullElse(System.getenv("DB_PASSWORD"), "postgres1");
+            Objects.requireNonNullElse(System.getenv("DB_PASSWORD"), "punchcode");
 
 
     private SingleConnectionDataSource adminDataSource;
@@ -37,9 +37,9 @@ public class TestingDatabaseConfig {
     public void setup() {
         if (System.getenv("DB_HOST") == null) {
             adminDataSource = new SingleConnectionDataSource();
-            adminDataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
+            adminDataSource.setUrl("jdbc:postgresql://localhost:5433/postgres");
             adminDataSource.setUsername("postgres");
-            adminDataSource.setPassword("postgres1");
+            adminDataSource.setPassword("punchcode");
             adminJdbcTemplate = new JdbcTemplate(adminDataSource);
             adminJdbcTemplate.update("DROP DATABASE IF EXISTS \"" + DB_NAME + "\";");
             adminJdbcTemplate.update("CREATE DATABASE \"" + DB_NAME + "\";");

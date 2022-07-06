@@ -47,8 +47,8 @@ public class JdbcDepartmentDao implements DepartmentDao {
 	public void updateDepartment(Department updatedDepartment) {
 	String sql = "UPDATE department "+
 			"SET department_id = ?, name = ? "+
-			"WHERE = department_id = ?;";
-	jdbcTemplate.update(sql, updatedDepartment.getId(), updatedDepartment.getName(), updatedDepartment.getId());
+			"WHERE department_id = ?";
+	int updateDepartment = jdbcTemplate.update(sql, updatedDepartment.getId(), updatedDepartment.getName(), updatedDepartment.getId());
 	}
 
 	private Department mapRowToDepartment(SqlRowSet rowSet) {
