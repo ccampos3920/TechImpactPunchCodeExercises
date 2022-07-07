@@ -20,36 +20,60 @@ public class JdbcTimesheetDaoTests extends BaseDaoTests {
             LocalDate.parse("2021-02-01"), 2.0, false, "Timesheet 4");
     
     private JdbcTimesheetDao sut;
+    private Timesheet testTimesheet;
 
 
     @Before
     public void setup() {
         sut = new JdbcTimesheetDao(dataSource);
+        testTimesheet = new Timesheet(5, 1, 2, LocalDate.parse("2021-02-02"), 2.0, true, "test");
+
     }
 
     @Test
     public void getTimesheet_returns_correct_timesheet_for_id() {
-        Assert.fail();
+        Timesheet timesheet = sut.getTimesheet(1);
+        Assert.assertNotNull("getTimesheet returned null", timesheet);
+        assertTimesheetsMatch(TIMESHEET_1, timesheet);
+
     }
 
     @Test
     public void getTimesheet_returns_null_when_id_not_found() {
-        Assert.fail();
+        Timesheet timesheet = sut.getTimesheet(5);
+        Assert.assertNull("getDepartment failed to return null for id not in database", timesheet);
     }
 
     @Test
     public void getTimesheetsByEmployeeId_returns_list_of_all_timesheets_for_employee() {
-        Assert.fail();
+        List<Timesheet> timesheet = sut.getTimesheetsByEmployeeId(2);
+
+        Assert.assertEquals(2, timesheet.size());
+        assertTimesheetsMatch(TIMESHEET_3, timesheet.get(0));
+        assertTimesheetsMatch(TIMESHEET_4, timesheet.get(1));
     }
 
     @Test
     public void getTimesheetsByProjectId_returns_list_of_all_timesheets_for_project() {
-        Assert.fail();
+    List<Timesheet> timesheet = sut.getTimesheetsByProjectId(5);
+
+    Assert.assertEquals("Project not found with ID", 0, timesheet.size());
+
+
     }
 
     @Test
     public void createTimesheet_returns_timesheet_with_id_and_expected_values() {
-        Assert.fail();
+        Timesheet createdTimesheet = sut.createTimesheet(testTimesheet);
+
+        Assert.assertNotNull("CreateTimesheet returned null", createdTimesheet);
+
+        Integer newId = createdTimesheet.getTimesheetId();
+        Assert.assertTrue("CreateTimesheet failed to return a project with an id", newId>0);
+
+        testTimesheet.setTimesheetId(newId);
+        assertTimesheetsMatch( testTimesheet,createdTimesheet);
+
     }
 
     @Test

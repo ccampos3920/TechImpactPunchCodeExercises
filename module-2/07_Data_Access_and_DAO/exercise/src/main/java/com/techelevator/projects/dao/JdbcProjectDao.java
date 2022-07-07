@@ -47,8 +47,8 @@ public class JdbcProjectDao implements ProjectDao {
 		String sql = "INSERT INTO project(project_id, name, from_date, to_date) "+
 				"VALUES(?,?,?,?)";
 
-		int createProject = jdbcTemplate.update(sql, newProject.getId(), newProject.getName(),
-				newProject.getFromDate(), newProject.getToDate());
+	jdbcTemplate.update(sql, newProject.getId(), newProject.getName(),
+			newProject.getFromDate(), newProject.getToDate());
 	return newProject;
 	}
 
