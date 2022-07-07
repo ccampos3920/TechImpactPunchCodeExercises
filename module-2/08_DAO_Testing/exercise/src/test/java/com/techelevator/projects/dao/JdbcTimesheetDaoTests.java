@@ -78,7 +78,14 @@ public class JdbcTimesheetDaoTests extends BaseDaoTests {
 
     @Test
     public void created_timesheet_has_expected_values_when_retrieved() {
-        Assert.fail();
+        Timesheet createdTimesheet = sut.createTimesheet(testTimesheet);
+
+        Assert.assertNotNull("Can't test if created timesheet has correct values until createTimesheet is working", createdTimesheet);
+
+        Integer newId = createdTimesheet.getTimesheetId();
+        Timesheet retrievedTimesheet = sut.getTimesheet(newId);
+
+        assertTimesheetsMatch(createdTimesheet, retrievedTimesheet);
     }
 
     @Test
