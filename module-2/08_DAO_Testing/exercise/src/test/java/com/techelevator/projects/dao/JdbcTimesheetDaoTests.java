@@ -46,11 +46,10 @@ public class JdbcTimesheetDaoTests extends BaseDaoTests {
 
     @Test
     public void getTimesheetsByEmployeeId_returns_list_of_all_timesheets_for_employee() {
-        List<Timesheet> timesheet = sut.getTimesheetsByEmployeeId(2);
+        List<Timesheet> timesheet = sut.getTimesheetsByEmployeeId(1);
 
-        Assert.assertEquals(2, timesheet.size());
-        assertTimesheetsMatch(TIMESHEET_3, timesheet.get(0));
-        assertTimesheetsMatch(TIMESHEET_4, timesheet.get(1));
+        Assert.assertEquals(1, timesheet.size());
+        assertTimesheetsMatch(TIMESHEET_1, timesheet.get(0));
     }
 
     @Test
@@ -90,17 +89,33 @@ public class JdbcTimesheetDaoTests extends BaseDaoTests {
 
     @Test
     public void updated_timesheet_has_expected_values_when_retrieved() {
-        Assert.fail();
+       Timesheet timesheet = sut.createTimesheet(testTimesheet);
+
+       Integer newId = timesheet.getTimesheetId();
+       Timesheet retrievedTimesheet = sut.getTimesheet(newId);
+
+       assertTimesheetsMatch(timesheet, retrievedTimesheet);
     }
 
     @Test
     public void deleted_timesheet_cant_be_retrieved() {
-        Assert.fail();
+        sut.deleteTimesheet(1);
+
+        Timesheet timesheet = sut.getTimesheet(1);
+        Assert.assertNull("deleteTimesheet failed to remove timesheet from database", timesheet);
+
+        List<Timesheet> timesheets = sut.getTimesheetsByProjectId(1);
+        Assert.assertEquals("deleteProject left too many projects in database", 1, timesheets.size());
+        assertTimesheetsMatch(TIMESHEET_2, timesheets.get(0));
     }
 
     @Test
     public void getBillableHours_returns_correct_total() {
-        Assert.fail();
+        double billableHours = sut.getBillableHours(1, 1);
+        Assert.assertEquals(2.5, billableHours, 0.001);
+
+        billableHours = sut.getBillableHours(2, 1);
+        Assert.assertEquals(0.25, billableHours, 0.001);
     }
 
     private void assertTimesheetsMatch(Timesheet expected, Timesheet actual) {
@@ -114,3 +129,5 @@ public class JdbcTimesheetDaoTests extends BaseDaoTests {
     }
 
 }
+
+

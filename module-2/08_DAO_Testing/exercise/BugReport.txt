@@ -1,43 +1,51 @@
 Bug 1
 -----
-Test that demonstrates problem:
+Test that demonstrates problem: getTimesheetsByProjectId
 
-Expected output:
+Expected output: Searched by project ID
 
-Actual output:
+Actual output: Instead it's by timesheet_id
 
 How did you fix this bug?
+Changed the timesheet_id to project_id
 
 
 Bug 2
 -----
 Test that demonstrates problem:
+getTimesheetsByEmployeeId
 
 Expected output:
+A while statement
 
 Actual output:
+An if statement
 
 How did you fix this bug?
+Changing the If statement into a While
 
 
 Bug 3
 -----
 Test that demonstrates problem:
-
+getTimesheetsByProjectId
 Expected output:
+Timesheets via project ID
 
 Actual output:
-
+Not the correct line
 How did you fix this bug?
-
+Removing an extra line and replacing it with a .add
 
 Bug 4
 -----
 Test that demonstrates problem:
+getTimesheetsByEmployeeId
 
 Expected output:
+Timesheets via employee ID
 
 Actual output:
-
+Not all of them return
 How did you fix this bug?
-
+Same as above replaced a line with results =.
