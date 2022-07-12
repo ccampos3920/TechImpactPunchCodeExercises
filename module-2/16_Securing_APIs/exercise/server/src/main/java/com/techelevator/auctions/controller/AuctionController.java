@@ -5,13 +5,17 @@ import com.techelevator.auctions.dao.MemoryAuctionDao;
 import com.techelevator.auctions.exception.AuctionNotFoundException;
 import com.techelevator.auctions.model.Auction;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PostAuthorize;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import java.security.Principal;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
 @RequestMapping("/auctions")
+@PreAuthorize("isAuthenticated()")
 public class AuctionController {
 
     private AuctionDao dao;
@@ -19,7 +23,7 @@ public class AuctionController {
     public AuctionController() {
         this.dao = new MemoryAuctionDao();
     }
-
+    @PreAuthorize("permitAll()")
     @RequestMapping(path = "", method = RequestMethod.GET)
     public List<Auction> list(@RequestParam(defaultValue = "") String title_like, @RequestParam(defaultValue = "0") double currentBid_lte) {
 
@@ -32,7 +36,6 @@ public class AuctionController {
 
         return dao.list();
     }
-
     @RequestMapping(path = "/{id}", method = RequestMethod.GET)
     public Auction get(@PathVariable int id) throws AuctionNotFoundException {
         return dao.get(id);
@@ -40,24 +43,27 @@ public class AuctionController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(path = "", method = RequestMethod.POST)
+    @PreAuthorize("hasAnyRole('CREATOR', 'ADMIN')")
     public Auction create(@Valid @RequestBody Auction auction) {
         return dao.create(auction);
     }
 
     @RequestMapping(path = "/{id}", method = RequestMethod.PUT)
+    @PreAuthorize("hasAnyRole('CREATOR', 'ADMIN')")
     public Auction update(@Valid @RequestBody Auction auction, @PathVariable int id) throws AuctionNotFoundException {
         return dao.update(auction, id);
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @RequestMapping(path = "/{id}", method = RequestMethod.DELETE)
+    @PreAuthorize("hasAnyRole('ADMIN')")
     public void delete(@PathVariable int id) throws AuctionNotFoundException {
         dao.delete(id);
     }
 
     @RequestMapping(path = "/whoami")
-    public String whoAmI() {
-        return "";
+    public String whoAmI(Principal principal) {
+       return principal.getName();
     }
 
 }
