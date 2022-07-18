@@ -51,7 +51,6 @@ public class CatController {
 
     }
 
-    // post request to make a new cat
     @ResponseStatus(HttpStatus.CREATED)
     @RequestMapping(method = RequestMethod.POST)
     public void save(@RequestBody CatCard catcard) {
