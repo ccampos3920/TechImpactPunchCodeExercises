@@ -1,0 +1,55 @@
+.thead{
+    color:goldenrod;
+    text-align: center;
+    border: 10px;
+    background-color: teal;
+    border: 5px outset gold;
+}
+
+.mainimg{
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+    border: 10px outset gold;
+
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tablehead{
+    text-align: center;
+
+    color:goldenrod;
+    border: 10px;
+    background-color: teal;
+    border: 5px outset gold;
+    border-style: double;
+    width: 500px;    
+
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-decoration: underline;
+
+}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #D6EEEE;
+    text-decoration: underline;
+
+
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+
