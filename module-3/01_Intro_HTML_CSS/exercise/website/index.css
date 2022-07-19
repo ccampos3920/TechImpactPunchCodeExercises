@@ -35,6 +35,8 @@
 
     text-decoration: underline;
 
+    font-size: 27px;
+
 }
 
 table, th, td {
@@ -50,5 +52,66 @@ table, th, td {
 
   }
 
+  h3{
+      font-size: 27px;
+      text-decoration: underline;
+      text-align: center;
+
+      color:goldenrod;
+      border: 10px;
+      background-color: teal;
+      border: 5px outset gold;
+      border-style: double;
+      width: 500px;    
+  
+      align-content: center;
+      margin-left: auto;
+      margin-right: auto;
+  
+      text-decoration: underline;
+
+  }
+
+.quotes{
+    text-align: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    font-style: italic;
 
 
+}
+
+.quotesc{
+   font-size: 20px;
+}
+
+h4{
+    font-size: 27px;
+    text-decoration: underline;
+    text-align: center;
+
+    color:goldenrod;
+    border: 10px;
+    background-color: teal;
+    border: 5px outset gold;
+    border-style: double;
+    width: 500px;    
+
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-decoration: underline;
+}
+
+.linkthing, ul, h4, li{
+    text-align: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    font-style: italic;
+
+}
