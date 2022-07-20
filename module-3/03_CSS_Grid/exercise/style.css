@@ -53,7 +53,7 @@ header img {
 
 #main-grid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "headline headline picture"
     "quote quote picture"
@@ -89,7 +89,7 @@ header img {
  grid-area: experience;
 
  display:grid;
- grid-template-columns: auto auto;
+ grid-template-columns: 1fr 1fr;
  row-gap: 20px;
  column-gap: 50px;
  grid-template-areas:
@@ -121,23 +121,22 @@ header img {
         display:grid;
         row-gap: 20px;
         column-gap: 35px;
-        grid-template-columns: auto/auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "header header"
+        "headline headline"
         "quote picture"
-        "contact contact"
+        "quote contact"
         "profile profile"
-        "code web"
-        "database design";
+        "experience experience"
         }
     #experience-grid {
         display:grid;
         row-gap: 20px;
         column-gap: 20px;
-        grid-template-columns: auto/auto;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas:
         "code web"
-        "databse design"
+        "database design"
         }
     }
 
@@ -147,23 +146,20 @@ header img {
         display:grid;
         row-gap: 20px;
         column-gap: 35px;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         grid-template-areas:
-        "header"
+        "headline"
         "picture"
         "contact"
         "quote"
         "profile"
-        "code"
-        "web"
-        "database"
-        "design"
+        "experience"
         }
  #experience-grid {
             display:grid;
             row-gap: 20px;
             column-gap: 20px;
-            grid-template-columns: auto/auto;
+            grid-template-columns: 1fr 1fr;
             grid-template-areas:
             "code"
             "web"
