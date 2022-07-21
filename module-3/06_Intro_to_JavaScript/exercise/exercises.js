@@ -1,28 +1,50 @@
-﻿/*
-1. **sumDouble** Given two int values, return their sum. Unless the two values are the 
-    same, then return double their sum.
+﻿
+// 1. **sumDouble** Given two int values, return their sum. Unless the two values are the 
+//     same, then return double their sum.
 
-		sumDouble(1, 2) → 3
-		sumDouble(3, 2) → 5
-		sumDouble(2, 2) → 8
+		// sumDouble(1, 2) → 3
+		// sumDouble(3, 2) → 5
+		// sumDouble(2, 2) → 8
 
 		function sumDouble(x, y) {
-			// do logic here
-			// return result;
+			if(x!=y){
+				return x+y;
+			}
+			else if(x!=y){
+				return x+y;
+			}
+			else if(x===y){
+				return (x+y)*2;
+			}
 			return x + y;
         }
-*/
 
-/*
-2. **hasTeen** We'll say that a number is "teen" if it is in the range 13..19 inclusive. 
-    Given 3 int values, return true if 1 or more of them are teen.
 
-		hasTeen(13, 20, 10) → true
-		hasTeen(20, 19, 10) → true
-		hasTeen(20, 10, 13) → true
-*/
+
+// 2. **hasTeen** We'll say that a number is "teen" if it is in the range 13..19 inclusive. 
+//     Given 3 int values, return true if 1 or more of them are teen.
+
+// 		hasTeen(13, 20, 10) → true
+// 		hasTeen(20, 19, 10) → true
+// 		hasTeen(20, 10, 13) → true
+
+function hasTeen(x,y,z){
+	if(x>=13 && x<=19){
+		return true;
+	}
+	else if(y>=13 && y<=19){
+		return true;
+	}
+
+	else if(z>=13 && z<=19){
+		return true;
+	}
+	return false;
+}
 
 /* 
+
+
 3. **lastDigit** Given two non-negative int values, return true if they have the same 
     last digit, such as with 27 and 57.
 
@@ -30,6 +52,15 @@
 		lastDigit(6, 17) → false
 		lastDigit(3, 113) → true
 */
+
+function lastDigit(a,b){
+	let x=a%10;
+	let y=b%10;
+	if(x==y){
+		return true;
+	}
+	return false;
+}
 
 /*
 4. **seeColor** Given a string, if the string begins with "red" or "blue" return that color 
@@ -39,6 +70,20 @@
 		seeColor("xxred") → ""
         seeColor("blueTimes") → "blue"
 */
+
+function seeColor(input){
+	let a = "red";
+	let b = "blue";
+
+	if(input.substring(0,3) == "red"){
+		return a;
+	}	else if(input.substring(0,4) == "blue"){
+		return b;
+	} else {
+		return "";
+	}
+
+}
 
 /*
 5. **oddOnly** Write a function that given an array of integer of any length, removes
