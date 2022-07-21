@@ -21,3 +21,27 @@ body {
 .box:nth-child(4) {
   background-color: #005270;
 }
+
+.container{
+  display: flex;
+}
+
+div.box:first-child{
+  flex-grow: 1;
+}
+
+div.box:nth-child(2){
+  flex-grow: 2;
+}
+
+
+div.box:nth-child(3){
+  flex-grow: 1;
+}
+
+div.box:nth-child(4){
+  flex-grow: 2;
+}
+
+
+

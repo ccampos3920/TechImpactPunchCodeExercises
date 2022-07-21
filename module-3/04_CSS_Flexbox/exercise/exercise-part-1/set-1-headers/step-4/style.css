@@ -38,3 +38,22 @@ a:hover {
   text-decoration: underline;
 }
 
+header>nav>ul{
+  display:flex;
+  justify-content: flex-end;
+  flex-direction:inherit;
+  
+}
+header{
+  display:flex;
+  justify-content: center;
+  
+}
+
+header>a{
+  flex-grow: 0;
+}
+
+header>nav{
+  flex-grow: 1;
+}
