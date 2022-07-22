@@ -93,6 +93,16 @@ function seeColor(input){
 		oddOnly([2, 4, 8, 32, 256]); → []
 */
 
+function oddOnly(array) {
+    var empty = [];
+    for (var i = 0; i < array.length ; i++) {
+        if (array[i] % 2 !== 0){
+            empty.push(array[i]);
+        }
+    }
+    return empty;
+}
+
 /*
 6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
     at the end of the string, such as with "edited".
@@ -101,6 +111,19 @@ function seeColor(input){
 		frontAgain("edit") → false
 		frontAgain("ed") → true
 */
+
+function frontAgain(string){
+	var first = string.substring(0,2);
+	var second =string.substring(string.length-2);
+	
+	if(first==second){
+		return true;
+	}
+	else{
+	return false;
+	}
+
+	}
 
 /*
 7. **cigarParty** When squirrels get together for a party, they like to have cigars. 
@@ -113,6 +136,17 @@ or false otherwise.
 		cigarParty(50, false) → true
 		cigarParty(70, true) → true
 */
+
+	function cigarParty(num, boolean){
+		if(num>=40 && num<=60 && !boolean){
+			return true;
+		}
+		else if(boolean && num>=40){
+			return true;
+
+		}
+		return false;
+	}
 
 /*
 8. **fizzBuzz** Given a number, return a value according to the following rules:
@@ -127,6 +161,20 @@ In all other cases return the original number.
 	fizzBuzz(15) → "FizzBuzz"
 	fizzBuzz(8) → 8
 */
+	function fizzBuzz(num){
+		
+		if(num%3==0 && num%5==0){
+			return "FizzBuzz";
+		}
+		else if(num%3==0){
+			return "Fizz";
+		}
+		else if (num%5==0){
+			return "Buzz";
+		}
+		
+		return num;
+	}
 
 /*
 9. **filterEvens** Write a function that filters an array to only include even numbers.
@@ -136,6 +184,16 @@ In all other cases return the original number.
 	filterEvens([2, 4, 6]) → [2, 4, 6]
 	filterEvens([100, 8, 21, 24, 62, 9, 7]) → [100, 8, 24, 62]
 */
+function filterEvens(array) {
+    var empty = [];
+    for (var i = 0; i < array.length ; i++) {
+        if (array[i] % 2 == 0){
+            empty.push(array[i]);
+        }
+    }
+    return empty;
+}
+
 
 /*
 10. **filterBigNumbers** Write a function that filters numbers greater than or equal to 100.
@@ -144,6 +202,17 @@ In all other cases return the original number.
 	filterBigNumbers([3, 2, 7, 1, -100, -120]) → []
 	filterBigNumbers([]) → []
 */
+	function filterBigNumbers(num){
+		var empty = []; 
+		for(var i = 0; i<num.length; i++){
+			if(num[i]>=100){
+				empty.push(num[i]);
+			}
+		}
+		return empty;
+	}
+
+
 
 /*
 11. **filterMultiplesOfX** Write a function to filter numbers that are a multiple of a 
@@ -153,6 +222,16 @@ parameter, `x` passed in.
 	filterMultiplesOfX([3, 5, 10, 20, 18, 21, 42, 67], 5) → [5, 10, 20]
 */
 
+function filterMultiplesOfX(array, number) {
+	var empty = []; 
+	for (var i = 0; i < array.length; i++) {
+	  if (array[i] % number == 0) { 
+		empty.push(array[i]); 
+	  }
+	}
+  
+	return empty;
+  }
 /*
 12. **createObject** Write a function that creates an object with a property called 
 firstName, lastName, and age. Populate the properties with your values.
@@ -165,3 +244,12 @@ firstName, lastName, and age. Populate the properties with your values.
 		age
 	}
 */
+
+	function createObject() {
+		const person = {
+		firstName: 'Cristian',
+		lastName: 'Campos',
+		age: 24,
+		};
+		return person;
+	}
