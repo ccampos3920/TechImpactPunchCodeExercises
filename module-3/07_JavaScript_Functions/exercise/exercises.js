@@ -136,15 +136,15 @@ function makeHappy(arrayToCapitalize){
  * @returns {number|string} the number or string that is largest
  **/
 
-function findLargest(searchArray){
-    var largest = 0;
-    
-    searchArray.forEach( (element) =>{
-      if(largest < element) 
-      largest = elem;
-      return largest;
-    });
+ function findLargest(searchArray) {
+	let currentLargest = searchArray[0]
 
+	searchArray.forEach((element) => {
+		if (element > currentLargest) {
+			currentLargest = element
+		}
+	})
+	return currentLargest
 }
 
 /*
