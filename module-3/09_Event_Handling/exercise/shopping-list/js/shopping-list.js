@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     task.querySelector('i').classList.add('completed');
     completeAll.innerText = "Mark All Incomplete"
     }
-
+    
     else if(task.classList.contains('completed')){
       task.classList.remove('completed');
       task.querySelector('i').classList.remove('completed')
