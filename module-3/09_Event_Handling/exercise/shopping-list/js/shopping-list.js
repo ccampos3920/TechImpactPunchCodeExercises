@@ -13,6 +13,7 @@ const groceries = [
   { id: 10, name: 'Tea', completed: false }
 ];
 
+
 /**
  * This function will get a reference to the title and set its text to the value
  * of the pageTitle variable that was set above.
@@ -36,3 +37,47 @@ function displayGroceries() {
     ul.appendChild(li);
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  setPageTitle();
+  displayGroceries();
+  
+  const tasks = document.querySelectorAll('li');
+  
+
+  tasks.forEach((task) => {
+    task.addEventListener('click', () => {
+        if (!task.classList.contains('completed')) {
+            task.classList.add('completed');
+            task.querySelector('i').classList.add('completed');
+        }
+    });
+  
+  task.addEventListener('dblclick', () => {
+    if(task.classList.contains('completed')) {
+      task.classList.remove('completed');
+      task.querySelector('i').classList.remove('completed')
+    }
+  })
+});
+
+  const completeAll = document.getElementById('toggleAll');
+  completeAll.addEventListener('click', () => {
+    tasks.forEach((task) => {
+    
+    if(!task.classList.contains('completed')){
+    task.classList.add('completed');
+    task.querySelector('i').classList.add('completed');
+    completeAll.innerText = "Mark All Incomplete"
+    }
+
+    else if(task.classList.contains('completed')){
+      task.classList.remove('completed');
+      task.querySelector('i').classList.remove('completed')
+      completeAll.innerText = "Mark All Complete"
+
+    }
+  })
+})
+
+})
