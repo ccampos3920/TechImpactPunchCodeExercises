@@ -1,8 +1,8 @@
 <template>
 <section>
-    <h2>Best Sellers</h2>
-  <div class="best-seller-list">
-    <book-card v-for="book in books" v-bind:book="book" v-bind:key="book.isbn" v-bind:enable-add="true" />
+    <h2>Bestsellers</h2>
+  <div class="bestseller-list">
+    <book-card v-for="book in books" v-bind:book="book" v-bind:key="book.isbn" enable-add="true" />
   </div>
   </section>
 </template>
@@ -11,11 +11,11 @@
 import BookCard from '@/components/BookCard.vue';
 
 export default {
-  name: "best-seller-list",
+  name: "bestseller-list",
   computed: {
     books() {
       return this.$store.state.popularBooks.filter((book) => {
-        return book.bestSeller === true;
+        return book.bestseller === true;
       });
     }
   },
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-.best-seller-list {
+.bestseller-list {
     display:flex;
     justify-content: space-evenly;
     flex-wrap: wrap;

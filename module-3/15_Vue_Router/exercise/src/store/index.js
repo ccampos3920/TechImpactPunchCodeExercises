@@ -35,65 +35,65 @@ export default new Vuex.Store({
       {
         title: "The Testaments",
         author: "Margaret Atwood",
-        bestSeller: true,
+        bestseller: true,
         newRelease: true,
         isbn: "9780385543781"
       },
       {
         title: "Normal People",
         author: "Sally Rooney",
-        bestSeller: false,
+        bestseller: false,
         newRelease: true,
         isbn: "9781984822178"
       },
       {
         title: "Where the Forest Meets the Stars",
         author: "Glendy Vanderah",
-        bestSeller: false,
+        bestseller: false,
         newRelease: true,
         isbn: "9781542040068"
       },
       {
         title: "Talking to Strangers",
         author: "Malcolm Gladwell",
-        bestSeller: true,
+        bestseller: true,
         newRelease: false,
         isbn: "9780316478526"
       },
       {
         title: "Embrace Your Weird",
         author: "Felicia Day",
-        bestSeller: true,
+        bestseller: true,
         newRelease: false,
         isbn: "9781982113223"
       },
       {
         title: "Recursion",
         author: "Blake Crouch",
-        bestSeller: false,
+        bestseller: false,
         newRelease: true,
         isbn: "9781524759780"
       },
       {
         title: "This Is How You Lose the Time War",
         author: "Amal El-Mohtar",
-        bestSeller: false,
+        bestseller: false,
         newRelease: true,
         isbn: "9781534431003"
       },
       {
-        title: "Flatland",
-        author: "Edwin A. Abbott",
-        bestSeller: true,
+        title: "Fire & Blood",
+        author: "George R.R. Martin",
+        bestseller: true,
         newRelease: false,
-        isbn: "048627263X"
+        isbn: "9781524796280"
       },
       {
-        title: "Things Fall Apart",
-        author: "Chinua Achebe",
-        bestSeller: true,
+        title: "Of Blood and Bone",
+        author: "Nora Roberts",
+        bestseller: true,
         newRelease: false,
-        isbn: "9780449208106"
+        isbn: "9781250122995"
       },
     ]
   },
