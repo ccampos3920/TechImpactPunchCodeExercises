@@ -1,7 +1,7 @@
 <template>
 <section>
     <h2>Bestsellers</h2>
-  <div class="bestseller-list">
+  <div class="best-seller-list">
     <book-card v-for="book in books" v-bind:book="book" v-bind:key="book.isbn" enable-add="true" />
   </div>
   </section>
@@ -11,7 +11,7 @@
 import BookCard from '@/components/BookCard.vue';
 
 export default {
-  name: "bestseller-list",
+  name: "best-seller-list",
   computed: {
     books() {
       return this.$store.state.popularBooks.filter((book) => {
