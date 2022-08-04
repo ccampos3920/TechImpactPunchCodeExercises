@@ -29,7 +29,7 @@ export default {
                 read: false,
                 isbn: ''
             };
-            this.$router.push({name: 'myBooks'});
+            this.$router.push({name: 'my-books'})
         }
     }
 }

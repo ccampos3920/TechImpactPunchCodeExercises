@@ -1,8 +1,8 @@
 <template>
 <section>
-    <h2>Bestsellers</h2>
+    <h2>Best Sellers</h2>
   <div class="best-seller-list">
-    <book-card v-for="book in books" v-bind:book="book" v-bind:key="book.isbn" enable-add="true" />
+    <book-card v-for="book in books" v-bind:book="book" v-bind:key="book.isbn" v-bind:enable-add="true" />
   </div>
   </section>
 </template>
@@ -15,7 +15,7 @@ export default {
   computed: {
     books() {
       return this.$store.state.popularBooks.filter((book) => {
-        return book.bestseller === true;
+        return book.bestSeller === true;
       });
     }
   },
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style>
-.bestseller-list {
+.best-seller-list {
     display:flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
