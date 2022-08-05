@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '@/views/Home.vue';
 import Messages from '@/views/Messages.vue';
 
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -15,7 +16,8 @@ const routes = [
     path: '/:id',
     name: 'Messages',
     component: Messages
-  }
+  },
+ 
 ];
 
 const router = new VueRouter({
